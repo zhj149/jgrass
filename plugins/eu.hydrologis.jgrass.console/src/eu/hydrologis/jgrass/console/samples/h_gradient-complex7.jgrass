@@ -1,0 +1,8 @@
+/** h_gradient-complex7.jgrass */
+Object object;
+jgrass {
+	
+	$object = h.gradient
+		--igrass-pit [h.pitfiller --igrass-elevation pit --ograss-pit *]
+		--ograss-gradient gradmaster
+}

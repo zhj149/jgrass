@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.draindir" desc="Draindir">
+	<field type="rastermap" required="true" name="pit" desc="depitted elevation map" order="0" repr=" --igrass-pit #" />
+	<field type="rastermap" required="true" name="flow" desc="map of flowdirections" order="1" repr=" --igrass-flow #" />
+	<field type="double" required="true" name="lambda" desc="lambda" default="1.0" order="2" repr=" --lambda #" />
+	<exclusiveOption name="mode" required="true" order="3">
+		<option name="LAD mode" order="1" repr=" --mode 1">
+		</option>
+		<option name="LTD mode" order="2" repr=" --mode 2">
+		</option>
+	</exclusiveOption>
+	<exclusiveOption name="standardmode" required="true" order="4">
+		<option name="Standard mode" order="1" repr="">
+			<field type="string" name="dir" required="true" desc="output draindir map" repr=" --ograss-dir #" />
+			<field type="string" name="tca" required="true" desc="output tca map" repr=" --ograss-tca #" />
+		</option>
+		<option name="Flow fixed mode" order="2" repr=" --flowfixed 1">
+			<field type="rastermap" name="flowfixed" required="true" desc="input flowfixed map" repr=" --igrass-flowfixed #" />
+			<field type="string" name="dir" required="true" desc="output draindir map" repr=" --ograss-dir #" />
+		</option>
+	</exclusiveOption>	
+</command>

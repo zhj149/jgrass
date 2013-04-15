@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.sumdownstream" desc="Sumdownstream">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="maptosum" desc="input map to sum downstream" order="1" repr=" --igrass-maptosum #" />
+	<field type="string" required="true" name="summ" desc="summ" order="2" repr=" --ograss-summ #" />
+	<i18n key="summ" en="sum downstream output map" it="mappa con i valori sommati verso valle in uscita"/>
+</command>

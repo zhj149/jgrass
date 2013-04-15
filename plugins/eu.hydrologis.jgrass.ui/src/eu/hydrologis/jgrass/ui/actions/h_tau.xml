@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.tau" desc="Tau">
+	<field type="rastermap" required="true" name="slope" desc="input slope map" order="0" repr=" --igrass-slope #" />
+	<field type="rastermap" required="true" name="ab" desc="input a/b map" order="1" repr=" --igrass-ab #" />
+	<field type="double" required="true" name="rho" desc="rho" order="2" repr=" --rho #" />
+	<field type="double" required="true" name="g" desc="g" order="3" repr=" --g #" />
+	<field type="string" required="true" name="ni" desc="ni" order="4" repr=" --ni #" />
+	<field type="string" required="true" name="q" desc="q" order="5" repr=" --q #" />
+	<field type="string" required="true" name="k" desc="k" order="6" repr=" --k #" />
+	<field type="string" required="true" name="c" desc="c" order="7" repr=" --c #" />
+	<field type="string" required="true" name="t" desc="t" order="8" repr=" --t #" />
+	<field type="string" required="true" name="tau" desc="tau" order="9" repr=" --ograss-tau #" />
+	<i18n key="tau" en="output map with tangential stress at the bottom" it="mappa con gli sforzi tangenziali al fondo"/>
+	<i18n key="rho" en="water density" it="densità dell'acqua"/>
+	<i18n key="g" en="gravity" it="accelerazione di gravità"/>
+	<i18n key="ni" en="cinematic viscosity" it="viscosità cinematica"/>
+	<i18n key="q" en="effective rain per area unit" it="precipitazione effettiva per unità di area"/>
+	<i18n key="k" en="k-parameter of the resistance coefficient lay" it="parametro k della legge del coefficiente di resitenza"/>
+	<i18n key="c" en="c-parameter of the resistance coefficient lay" it="parametro c della legge del coefficiente di resitenza"/>
+	<i18n key="t" en="trasmissivity" it="trasmissività"/>
+</command>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.dd" name="h.dd">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="tca" name="tca" order="1" repr=" --igrass-tca #" required="true" type="rastermap"/>
+    <field desc="net" name="net" order="2" repr=" --igrass-net #" required="true" type="rastermap"/>
+    <field desc="dd" name="drainage density" order="3" repr=" --ograss-dd #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="tca" en="input total contributing area map" it="mappa delle aree totali contribuenti in ingresso"/>
+    <i18n key="net" en="input network map" it="mappa della rete in ingresso"/>
+    <i18n key="dd" en="drainage density output map" it="mappa della densita' di drenaggio in uscita"/>
+</command>

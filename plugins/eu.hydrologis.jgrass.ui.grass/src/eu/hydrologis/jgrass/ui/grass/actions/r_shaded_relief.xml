@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.shaded.relief" name="r.shaded.relief">
+	<field desc="Input elevation map" name="map" order="0" repr=" map=#" required="true" type="rastermap" />
+	<check name="Insert the altitude of the sun above the horizon" required="false" order="1" repr=" " >
+	<field type="double" required="false" name="altitude" desc="altitude in degrees (0-90)" order="1" repr=" altitude=#" default="30"/>
+	</check>
+	<check name="Insert the azimuth of the sun to the east of north" required="false" order="2" repr=" " >
+	<field desc="azimuth in degree (0-360)" name="azimuth" order="0" repr=" azimuth=#" required="false" type="string" default="270"/>
+	</check>
+	<field desc="allow output maps to override existing maps" name="over" order="9" repr=" --o" required="false" type="check" />
+	<field desc="Output shaded relief map name" name="shadedmap" order="10" repr=" shadedmap=#" required="true" type="string" />
+</command>

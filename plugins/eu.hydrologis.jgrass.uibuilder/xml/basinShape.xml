@@ -1,0 +1,5 @@
+<command name="h.basinShape" desc="Basin shape" minwidth="400" minheight="400">
+	<field type="map" required="true" name="igrass-pit" desc="Pit" order="1" repr="--igrass-pit #" />
+	<field type="map" required="true" name="igrass-basins" desc="Basins" order="2" repr="--igrass-basins #" />
+	<field type="string" required="true" name="oshapefile-basinshape" desc="Basin shape" order="3" repr="--oshapefile-basinshape #" />
+</command>

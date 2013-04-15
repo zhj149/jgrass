@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.hypsographic" name="h.hypsographic">
+    <field desc="Input elevation raster map" name="elevation" order="0" repr=" --igrass-elevation #" required="true" type="rastermap"/>
+    <field type="int" required="true" name="bins" desc="number of bins" order="1" repr=" --bins #" default="50"/>
+	<field type="file" required="false" name="fileout" desc="Create an output file" order="2" repr=" --oscalar-hypsographic #" />
+	<check name="output hypsographic chart" required="false" order="3" repr=" --ochart-hypsographic 'LINE#hypsografic curve#heigth[m smm]#area[km2]#hypso'" />
+</command>
+

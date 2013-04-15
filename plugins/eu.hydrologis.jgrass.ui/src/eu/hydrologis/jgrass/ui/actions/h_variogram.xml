@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.variogram" desc="h.variogram">
+	<field type="string" required="true" name="idfield" desc="Field of the ID" order="1" repr=" --idfield #" />
+	<field type="string" required="true" name="distance" desc="Distance" order="2" repr=" --distance #" />
+	<field type="fileopen" required="true" name="values" desc="Input values" order="3" repr=" --iscalar-inputvalues #" />
+	<field type="fileopen" required="true" name="positions" desc="Input positions shapefile" order="4" repr=" --ishapefile-positions #" />
+	<field type="file" required="true" name="cloud" desc="Variogram" order="5" repr=" --oscalar-cloud #" />
+</command>

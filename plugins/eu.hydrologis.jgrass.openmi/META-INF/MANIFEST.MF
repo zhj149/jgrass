@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Openmi Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.openmi
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.openmi.OpenmiPlugin
+Bundle-Vendor: HydroloGIS S.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ net.refractions.udig.libs,
+ eu.hydrologis.jgrass.libs,
+ eu.hydrologis.jgrass.extlibs;bundle-version="1.0.0"
+Eclipse-LazyStart: true
+Bundle-ClassPath: .,
+ libs/org.openmi.standard.jar
+Export-Package: eu.hydrologis.jgrass.openmi,
+ eu.hydrologis.openmi,
+ eu.hydrologis.openmi.util,
+ nl.alterra.openmi.sdk.backbone,
+ nl.alterra.openmi.sdk.buffer,
+ nl.alterra.openmi.sdk.configuration,
+ nl.alterra.openmi.sdk.elementset,
+ nl.alterra.openmi.sdk.persistence,
+ nl.alterra.openmi.sdk.persistence.xml,
+ nl.alterra.openmi.sdk.spatial,
+ nl.alterra.openmi.sdk.utilities,
+ nl.alterra.openmi.sdk.wrapper,
+ org.openmi.standard

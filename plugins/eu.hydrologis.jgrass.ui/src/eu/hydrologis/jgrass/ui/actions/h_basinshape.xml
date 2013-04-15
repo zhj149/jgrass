@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.basinShape" desc="Basinshape">
+	<field type="rastermap" required="true" name="basins" desc="input basins map" order="0" repr=" --igrass-basins #" />
+	<check name="insert the baricenter value of the following map as attribute of the each basin in the shapefile" required="false" order="1" repr="" >
+		<field type="rastermap" required="false" name="attribute" desc="the attribute map" order="0" repr=" --igrass-pit #" />
+	</check>	
+	<field type="file" required="true" name="basinshape" desc="output basins shapefile" order="2" repr=" --oshapefile-basinshape #" />
+</command>

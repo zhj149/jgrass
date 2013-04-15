@@ -1,0 +1,9 @@
+name: UTM
+datum: nad27
+nadgrids: conus
+proj: utm
+ellps: clark66
+a: 6378206.4000000004
+es: 0.0067686580
+f: 294.9786982000
+zone: 13

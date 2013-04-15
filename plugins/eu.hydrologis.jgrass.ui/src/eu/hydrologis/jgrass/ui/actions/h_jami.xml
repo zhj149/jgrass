@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.jami" desc="h.jami">
+	<field desc="data type (1-temp,2-press,3-moist,4-wind)" name="type" order="1" repr=" --type #" required="true" type="combo" default="1,2,3,4" />
+	<field type="string" required="true" name="stationnum" desc="Number of stations per elevation band" order="2" repr=" --stationnum #" />
+	<field type="string" required="true" name="bins" desc="Number of bins for the elevation subdivision" order="3" repr=" --bins #" />
+	<field type="string" required="true" name="stationid" desc="Field of the station id" order="4" repr=" --stationid #" />
+	<field type="string" required="true" name="stationelev" desc="Field of the station elevation" order="5" repr=" --stationelev #" />
+	<field type="string" required="true" name="basinid" desc="Field of the basin id" order="6" repr=" --basinid #" />
+	<field type="fileopen" required="true" name="altimetry" desc="Input altimetry scalarset" order="7" repr=" --iscalar-altimetry #" />
+	<field type="fileopen" required="true" name="stations" desc="Input stations shapefile" order="8" repr=" --ishapefile-stations #" />
+	<field type="fileopen" required="true" name="basins" desc="Input interpolation position shapefile" order="9" repr=" --ishapefile-basins #" />
+	<field type="fileopen" required="true" name="values" desc="Input values to be interpolated" order="10" repr=" --itscalar-values #" />
+	<field type="file" required="true" name="out" desc="Interpolated scalarset" order="11" repr=" --oscalar-out #" />
+</command>

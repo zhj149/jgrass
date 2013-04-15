@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="v.addattributes" desc="v.addattributes">
+	<field type="string" required="true" name="joinfield" desc="Field that maps ids to the scalarset" order="1" repr=" --joinfield #" />
+	<field type="fileopen" required="true" name="infeatures" desc="Input shapefile" order="2" repr=" --ishapefile-infeatures #" />
+	<field type="fileopen" required="true" name="attributes" desc="Attributes scalarset" order="3" repr=" --itscalar-attributes #" />
+	<field type="folder" required="true" name="outfeature" desc="Output folder plus file start pattern" order="4" repr=" --oshapefile-outfeatures #" />
+</command>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.saintgeo" desc="h.saintgeo">
+	<field desc="Head discharge" name="qhead" order="1" repr=" --itscalar-qhead #" required="true" type="fileopen"/>
+	<field desc="Input artificial flow" name="qlateral" order="2" repr=" --itscalar-qlateral #" required="true" type="fileopen"/>
+	<field desc="Input confluence flow" name="qconfluence" order="3" repr=" --itscalar-qconfluence #" required="true" type="fileopen"/>
+	<field desc="Input section file" name="sections" order="4" repr=" --sections #" required="true" type="fileopen"/>
+	<field desc="Input downstream level" name="down" order="5" repr=" --iscalar-downstreamlevel #" required="false" type="fileopen"/>
+	<field type="file" required="false" name="out" desc="Full model output" order="6" repr=" --oscalar-out #" />
+	<field type="file" required="false" name="geom" desc="Geometry model output" order="7" repr=" --oscalar-geom #" />
+	<field type="file" required="false" name="level" desc="Level model output" order="8" repr=" --oscalar-level #" />
+</command>

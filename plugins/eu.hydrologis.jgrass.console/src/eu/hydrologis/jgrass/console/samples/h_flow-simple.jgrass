@@ -1,0 +1,5 @@
+/** h_flow-simple.jgrass */
+jgrass {
+	
+	h.flow --igrass-pit pitty --ograss-flow flowty
+}

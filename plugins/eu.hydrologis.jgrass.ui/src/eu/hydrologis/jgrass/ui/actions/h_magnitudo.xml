@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.magnitudo" name="h.magnitudo">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="magnitudo" name="magnitudo" order="1" repr=" --ograss-magnitudo #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="magnitudo" en="magnitudo output map" it="mappa della magnitudo in uscita"/>
+</command>

@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.actionSets">
+
+	
+	<actionSet
+	    description="Native GRASS commands"
+	    id="eu.hydrologis.jgrass.ui.grassactionset"
+	    label="GRASS" visible="true">
+	    <menu id="grass" label="GRASS">
+	    <separator
+	          name="grassGroupSep">
+	    </separator>
+	    <groupMarker
+	          name="grassGroup">
+	    </groupMarker>
+	    </menu>
+	
+	    <menu
+	       id="rasterMenu"
+	       label="raster"
+	       path="grass/rasterGroup">
+	    <groupMarker
+	          name="rasterMenuGroup">
+	    </groupMarker>
+	    </menu>
+	 
+	    <menu
+	       id="genericMenu"
+	       label="generic"
+	       path="grass/genericGroup">
+	    <groupMarker
+	          name="genericMenuGroup">
+	    </groupMarker>
+	    </menu>
+	 
+	    <menu
+	       id="vectorMenu"
+	       label="vector"
+	       path="grass/vectorGroup">
+	    <groupMarker
+	          name="vectorMenuGroup">
+	    </groupMarker>
+	    </menu>
+	 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.g_rename"
+		       id="eu.hydrologis.jgrass.ui.actions.g_rename"
+		       label="g.rename"
+		       menubarPath="grass/genericMenu/genericMenuGroup"
+		       tooltip="g.rename">
+		 </action>
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.g_proj"
+		       id="eu.hydrologis.jgrass.ui.actions.g_proj"
+		       label="g.proj"
+		       menubarPath="grass/genericMenu/genericMenuGroup"
+		       tooltip="g.proj">
+		 </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_proj"
+         id="eu.hydrologis.jgrass.ui.actions.r_proj"
+         label="r.proj"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.proj">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_topmodel"
+         id="eu.hydrologis.jgrass.ui.actions.r_topmodel"
+         label="r.topmodel"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.topmodel">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_sun"
+         id="eu.hydrologis.jgrass.ui.actions.r_sun"
+         label="r.sun"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.sun">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_resamp_stats"
+         id="eu.hydrologis.jgrass.ui.actions.r_resamp_stats"
+         label="r.resamp.stats"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.resamp.stats">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_resamp_rst"
+         id="eu.hydrologis.jgrass.ui.actions.r_resamp_rst"
+         label="r.resamp.rst"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.resamp.rst">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_patch"
+         id="eu.hydrologis.jgrass.ui.actions.r_patch"
+         label="r.patch"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.patch">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_los"
+         id="eu.hydrologis.jgrass.ui.actions.r_los"
+         label="r.los"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.los">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_contour"
+         id="eu.hydrologis.jgrass.ui.actions.r_contour"
+         label="r.contour"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.contour">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_composite"
+         id="eu.hydrologis.jgrass.ui.actions.r_composite"
+         label="r.composite"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.composite">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_buffer"
+         id="eu.hydrologis.jgrass.ui.actions.r_buffer"
+         label="r.buffer"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.buffer">
+   </action>
+   <action
+         class="eu.hydrologis.jgrass.ui.grass.actions.r_out_gdal"
+         id="eu.hydrologis.jgrass.ui.actions.r_out_gdal"
+         label="r.out.gdal"
+         menubarPath="grass/rasterMenu/rasterMenuGroup"
+         tooltip="r.out.gdal">
+   </action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.r_in_gdal"
+		       id="eu.hydrologis.jgrass.ui.actions.r_in_gdal"
+		       label="r.in.gdal"
+		       menubarPath="grass/rasterMenu/rasterMenuGroup"
+		       tooltip="r.in.gdal">
+		 </action>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.v_surf_rst"
+		       id="eu.hydrologis.jgrass.ui.actions.v_surf_rst"
+		       label="v.surf.rst"
+		       menubarPath="grass/vectorMenu/vectorMenuGroup"
+		       tooltip="v.surf.rst">
+		 </action>
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.v_in_ogr"
+		       id="eu.hydrologis.jgrass.ui.actions.v_in_ogr"
+		       label="v.in.ogr"
+		       menubarPath="grass/vectorMenu/vectorMenuGroup"
+		       tooltip="v.in.ogr">
+		 </action>
+		 <action
+		       class="eu.hydrologis.jgrass.ui.grass.actions.v_out_ogr"
+		       id="eu.hydrologis.jgrass.ui.actions.v_out_ogr"
+		       label="v.out.ogr"
+		       menubarPath="grass/vectorMenu/vectorMenuGroup"
+		       tooltip="v.out.ogr">
+		 </action>
+		
+</actionSet>
+
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="eu.hydrologis.jgrass.ui.grass.StartupCheck">
+      </startup>
+   </extension>
+
+</plugin>

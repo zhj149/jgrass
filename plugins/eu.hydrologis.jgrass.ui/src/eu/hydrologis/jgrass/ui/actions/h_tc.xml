@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.tc" desc="Topographic Classes">
+	<field type="rastermap" required="true" name="prof" desc="prof" order="0" repr=" --igrass-prof #" />
+	<field type="rastermap" required="true" name="tan" desc="tan" order="1" repr=" --igrass-tang #" />
+	<field type="double" required="true" name="thprof" desc="thprof" order="2" repr=" --thprof #" />
+	<field type="double" required="true" name="thtang" desc="thtang" order="3" repr=" --thtang #" />
+	<field type="string" required="true" name="cp3" desc="cp3" order="4" repr=" --ograss-cp3 #" />
+	<field type="string" required="true" name="cp9" desc="cp9" order="5" repr=" --ograss-cp9 #" />
+	<i18n key="prof" en="input map of longitudinal curvature" it="mappa della curvatura longitudinale in ingresso"/>
+	<i18n key="tan" en="input map of normal curvature" it="mappa della curvatura tangenziale in ingresso"/>
+	<i18n key="cp3" en="output map with 3 topological classes" it="mappa con la suddivisione in 3 classi topologiche in uscita"/>
+	<i18n key="cp9" en="output map with 9 topological classes" it="mappa con la suddivisione in 9 classi topologiche in uscita"/>
+	<i18n key="thprof" en="threshold for longitudinal curvature" it="soglia per la curvatura longitudinale"/>
+	<i18n key="thtang" en="threshold for normal curvature" it="soglia per la curvatura tangenziale"/>
+</command>

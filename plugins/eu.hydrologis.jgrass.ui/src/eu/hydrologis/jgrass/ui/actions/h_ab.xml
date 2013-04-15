@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.ab" name="h.ab">
+    <field desc="curv map" name="input curv" order="0" repr=" --igrass-plan #" required="true" type="rastermap"/>
+    <field desc="contr area" name="input area" order="1" repr=" --igrass-tca #" required="true" type="rastermap"/>
+    <field desc="area per lenght" name="output length" order="2" repr=" --ograss-ab #" required="true" type="string"/>
+    <field desc="contour" name="output contour" order="3" repr=" --ograss-b #" required="true" type="string"/>
+    <i18n key="curv map" en="input planar curvatures map" it="mappa curvature piane in ingresso"/>
+    <i18n key="contr area" en="input total contributing areas map" it="mappa delle aree contribuenti totale in ingresso"/>
+    <i18n key="area per lenght" en="areas per length unit output map" it="mappa di area per unita' di lunghezza in uscita"/>
+    <i18n key="contour" en="contour line output map" it="mappa delle curve di livello in uscita!!"/>
+</command>
+
+
+
+
+
+

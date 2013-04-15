@@ -1,0 +1,35 @@
+<command name="h.netnumbering" desc="Netnumbering" minwidth="400" layoutsettings="B=D">
+	<i18n key="Point shape" de="Das Shape des Punktes" />
+	<i18n key="Netnumber" de="Netzwerknummer" />
+	<i18n key="Netnumber" it="Netnumber in Italiano" />
+	<i18n key="One" de="Eins" it="Uno" />
+	<i18n key="Two"  de="Zwei" it="Due" />
+	<i18n key="Three"  de="Drei" it="Tre" />
+	<i18n key="Four"  de="Vier" it="Quattro" />
+	<field type="map" required="true" name="igrass-flow" desc="Flow map" desc_de="Was ist das?" order="1" repr="--igrass-flow #" />
+	<field type="map" required="true" name="igrass-net" desc="Net map" order="2" repr="--igrass-net #" />
+	<exclusiveOption name="mode" required="true" order="3">
+		<option name="One" order="1" repr="--mode 0">
+			<field type="string" name="ograss-netnumber" required="true" desc="Netnumber" repr="--ograss-netnumber #">
+				<i18n key="Netnumber" de="Überlagerte Netnumber Übersetzung" />
+			</field>
+			<field type="string" name="ograss-basin" required="true" desc="Basin" repr="--ograss-basin #" labellayouconstraints="C1MR" layoutconstraints="D2" />
+			<i18n key="Basin" de="Basin Deutsch" it="Basin Italiano" />
+		</option>
+		<option name="Two" order="2" repr="--mode 1" layoutconstraints="B3">
+			<field type="int" name="thtca" required="true" desc="Thtca" repr="--thtca #" />
+			<field type="int" name="igrass-tca" required="true" desc="Tca" repr="--igrass-tca #" layoutconstraints="C5"/>
+		</option>
+		<option name="Three" order="3" repr="--mode 2" default="true">
+			<field type="file" name="ishapefile-pointshape:*.shp" required="true" desc="Point shape" repr="--ishapefile-pointshape #" />
+		</option>
+		<option name="Four" order="4" repr="--mode 3">
+			<field type="int" name="igrass-tca" required="true" desc="Tca" repr="--igrass-tca #" />
+			<field type="file" name="ishapefile-pointshape:*.shp" required="true" desc="Point shape" repr="--ishapefile-pointshape #" />
+			<field type="string" name="ograss-netnumber" required="true" desc="Netnumber" repr="--ograss-netnumber #" />
+			<field type="string" name="ograss-basin" required="true" desc="Basin" repr="--ograss-basin #" />
+		</option>
+	</exclusiveOption>
+	<field type="map" name="ocolor-colornumbers" desc="Color numbers" order="4" repr="--ocolor-colornumbers #" />
+	<field type="map" name="ocolor-colorbasins" desc="Color basins" order="5" repr="--ocolor-colorbasins #" />
+</command>

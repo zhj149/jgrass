@@ -1,0 +1,6 @@
+<command name="h.pfafstetter" desc="Pfafstetter">
+	<field type="map" required="true" name="igrass-flow" desc="Flow" order="1" repr="--igrass-flow #" />
+	<field type="map" required="true" name="igrass-hacks" desc="Hacks" order="2" repr="--igrass-hacks #" />
+	<field type="map" required="true" name="igrass-netnumber" desc="Netnumber" order="3" repr="--igrass-netnumber #" />
+	<field type="string" required="true" name="oshapefile-netshapeout" desc="Net shape out" order="4" repr="--oshapefile-netshapeout #" />
+</command>

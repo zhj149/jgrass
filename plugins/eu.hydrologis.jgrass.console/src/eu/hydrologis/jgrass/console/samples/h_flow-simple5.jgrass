@@ -1,0 +1,6 @@
+/** h_flow-simple5.jgrass */
+Object object;
+jgrass {
+	
+	$object = h.flow --igrass-pit * --ograss-flow flowty
+}

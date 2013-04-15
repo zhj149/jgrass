@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.netnumbering" desc="Netnumbering">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="net" desc="input stream network map" order="1" repr=" --igrass-net #" />
+	<exclusiveOption name="mode" required="true" order="2">
+		<option name="standard mode" order="1" repr=" --mode 0">
+		</option>
+		<option name="threshold on tca" order="2" repr=" --mode 1">
+			<field type="string" required="true" name="tcathreshold" desc="threshold on total contributing area map" order="0" repr=" --thtca #" />
+			<field type="rastermap" required="true" name="tca" desc="input total contributing area map" order="1" repr=" --igrass-tca #" />
+		</option>
+		<option name="point shapefile with monitoring points" order="3" repr=" --mode 2">
+			<field type="file" required="true" name="pointshape" desc="shapefile containing point in which cut the river network" order="0" repr=" --ishapefile-pointshape #" />
+		</option>
+		<option name="threshold on tca and point shapefile" order="4" repr=" --mode 3">
+			<field type="string" required="true" name="tcathreshold" desc="threshold on total contributing area map" order="0" repr=" --thtca #" />
+			<field type="rastermap" required="true" name="tca" desc="input total contributing area map" order="1" repr=" --igrass-tca #" />
+			<field type="file" required="true" name="pointshape" desc="shapefile containing point in which cut the river network" order="2" repr=" --ishapefile-pointshape #" />
+		</option>
+	</exclusiveOption>
+	<field type="string" required="true" name="netnum" desc="output netnumbering map" order="3" repr=" --ograss-netnumber #" />
+	<field type="string" required="true" name="basins" desc="output subbasins map" order="3" repr=" --ograss-basin #" />
+
+</command>

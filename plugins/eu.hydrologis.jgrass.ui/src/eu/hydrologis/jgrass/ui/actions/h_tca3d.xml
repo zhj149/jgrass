@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.tca3d" name="h.tca3d">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="flow" name="flow" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="tca3d" name="slope" order="2" repr=" --ograss-tca3d #" required="true" type="string"/>
+    <i18n key="pit" en="input depitted elevations map" it="raster delle elevazione depittato in ingresso"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="tca3d" en="3D total contributing area output map" it="mappa delle aree contribuenti 3D in uscita"/>
+</command>

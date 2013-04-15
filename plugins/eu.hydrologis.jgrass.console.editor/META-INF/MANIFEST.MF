@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Console Editor Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.console.editor;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.console.editor.ConsoleEditorPlugin
+Bundle-Vendor: HydroloGIS S.r.l.
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.jface.text,
+ org.eclipse.ui.views,
+ net.refractions.udig.project.ui,
+ eu.hydrologis.jgrass.ui.utilities,
+ eu.hydrologis.jgrass.ui.console;visibility:=reexport
+Eclipse-LazyStart: true
+Export-Package: eu.hydrologis.jgrass.console.editor,
+ eu.hydrologis.jgrass.console.editor.actions,
+ eu.hydrologis.jgrass.console.editor.preferences

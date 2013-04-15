@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="fill feature attributes" name="fill feature attributes">
+    <field desc="ID" name="ID" order="0" repr="--ID #" required="true" type="string"/>
+    <field desc="IDSTAZIONE" name="IDSTAZIONE" order="1" repr="IDSTAZIONE" required="false" type="string"/>
+    <field desc="Y" name="Y" order="2" repr="Y" required="false"
+type="string"/>
+    <field desc="X" name="X" order="3" repr="X" required="false"
+type="string"/>
+    <field desc="DESCRIZION" name="DESCRIZION" order="4"
+        repr="DESCRIZION" required="false" type="string"/>
+    <field desc="TIPOLOGIA_" name="TIPOLOGIA_" order="5"
+        repr="TIPOLOGIA_" required="false" type="string"/>
+    <field desc="RELATED_ID" name="RELATED_ID" order="6"
+        repr="RELATED_ID" required="false" type="string"/>
+    <field desc="RETE_ID" name="RETE_ID" order="7" repr="RETE_ID"
+        required="false" type="string"/>
+    <field desc="ATTIVO" name="ATTIVO" order="8" repr="ATTIVO"
+        required="false" type="string"/>
+</command>

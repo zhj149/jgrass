@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.splitsubbasin" name="h.splitsubbasin">
+	<field type="double" required="true" name="hackorder" desc="hackorder" order="0" repr=" --hackorder #" />
+	<field type="double" required="true" name="threshold" desc="threshold" order="1" repr=" --threshold #" />
+    <field desc="flow" name="flow" order="2" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="hacks" name="hacks" order="3" repr=" --igrass-hacks #" required="true" type="rastermap"/>
+    <field desc="tca" name="tca" order="4" repr=" --igrass-tca #" required="true" type="rastermap"/>
+    <field desc="netnumber" name="netnumber" order="5" repr=" --ograss-netnumber #" required="true" type="string"/>
+    <field desc="subbasins" name="subbasins" order="6" repr=" --ograss-subbasin #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="hacks" en="input hackstream map" it="mappa del'ordine di Hack in ingresso"/>
+    <i18n key="tca" en="input tca map" it="mappa delle aree contribuenti in ingresso"/>
+    <i18n key="netnumber" en="netnumbering output map" it="mappa della rete numerata in uscita"/>
+    <i18n key="subbasins" en="subbasins output map" it="mappa dei sottobacini in uscita"/>
+</command>

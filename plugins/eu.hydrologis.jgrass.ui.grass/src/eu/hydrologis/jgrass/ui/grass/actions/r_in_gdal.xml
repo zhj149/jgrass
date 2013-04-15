@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.in.gdal descr" name="r.in.gdal">
+    <field desc="map to import" name="input:" order="0" repr=" input=#" required="true" type="fileopen"/>
+    <field desc="output map name" name="output" order="1" repr=" output=#" required="true" type="string"/>
+    <field desc="location to create" name="location" order="2" repr=" location=#" required="false" type="string"/>
+    <field default="true" desc="permit overwrite" name="map overwrite" order="3" repr=" --o" type="check"/>
+    <field default="false" desc="override projection" name="projection overwrite" order="4" repr=" -o" type="check"/>
+    <field default="true" desc="extend region with imported map?" name="extend region" order="5" repr=" -e" type="check"/>
+</command>

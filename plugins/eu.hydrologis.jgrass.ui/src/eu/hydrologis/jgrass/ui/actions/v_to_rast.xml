@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="v.to.rast" desc="v.to.rast">
+	<field type="fileopen" required="true" name="input" desc="Input shapefile" order="0" repr=" --ishapefile-in #" />
+	<exclusiveOption name="mode" required="false" order="1">
+		<option name="Assing a shapefile field to the raster map" order="1" repr="">
+		<field type="string" required="false" name="field" desc="Shapefile fieldname" order="0" repr=" --fieldname #" />
+		</option>
+		<option name="Assign a constant value to the raster map" order="2" repr="" >
+		<field type="double" required="false" name="value" desc="Value number" order="1" repr=" --value #" />
+		</option>
+	</exclusiveOption>
+	<field type="string" required="true" name="output" desc="output raster map" order="2" repr=" --ograss-out #" />
+</command>

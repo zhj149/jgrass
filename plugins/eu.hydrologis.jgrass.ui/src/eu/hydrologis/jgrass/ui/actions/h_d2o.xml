@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.d2o" name="h.d2o">
+    <exclusiveOption name="mode" required="true" order="0">
+		<option name="topological distance (number of cells)" required="true" order="1" repr=" --mode 0">
+		</option>
+		<option name="simple distance (meters)" required="true" order="2" repr=" --mode 1">
+		</option>
+	</exclusiveOption>
+    <field desc="flow" name="flow" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="d2o" name="slope" order="2" repr=" --ograss-d2o #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="d2o" en="distance to outlet output map" it="mappa delle distanze dalla chiusura in uscita"/>   
+</command>

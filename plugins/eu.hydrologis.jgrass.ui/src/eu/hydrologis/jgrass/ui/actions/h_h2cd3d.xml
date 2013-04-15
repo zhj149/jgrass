@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.h2cd3d" desc="Hillslope2channel distance 3D">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="pit" desc="input depitted elevation map" order="1" repr=" --igrass-pit #" />
+	<field type="rastermap" required="true" name="net" desc="input stream network map" order="2" repr=" --igrass-net #" />
+	<field type="string" required="true" name="h2cd" desc="h2cd3d" order="3" repr=" --ograss-h2cd3d #" />
+	<i18n key="h2cd3d" en="output map with distance 3D from river network" it="mappa delle distanze 3D dalla rete in uscita"/>
+</command>

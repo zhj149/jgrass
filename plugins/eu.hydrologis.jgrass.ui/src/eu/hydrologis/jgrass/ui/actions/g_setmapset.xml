@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="g.setmapset" name="g.setmapset">
+    <field desc="setmapset" name="setmapset" order="0" repr=" #" required="true" type="folder"/>
+    <i18n key="setmapset" en="set the Mapset to use for calculations" it="settare il Mapset da usare per i calcoli"/>
+</command>

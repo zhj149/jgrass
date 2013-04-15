@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.pitfiller" name="h.pitfiller">
+    <field desc="in" name="input" order="0" repr=" --igrass-elevation #" required="true" type="rastermap"/>
+    <field desc="out" name="output" order="1" repr=" --ograss-pit #" required="true" type="string"/>
+    <i18n key="in" en="input elevation map" it="mappa di elevazione in ingresso"/>
+    <i18n key="out" en="depitted output map" it="mappa depittata in uscita"/>
+</command>

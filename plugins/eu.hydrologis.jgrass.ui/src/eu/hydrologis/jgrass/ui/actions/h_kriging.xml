@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.kriging" desc="h.kriging">
+	<field type="string" required="true" name="idfield" desc="Field of the ID of the start positions" order="1" repr=" --idfield #" />
+	<field type="string" required="true" name="idfieldinterpolated" desc="Field of the ID of the start interpolated positions" order="2" repr=" --idfieldinterpolated #" />
+	<field type="string" required="true" name="maxpoints" desc="Max number of points" order="3" repr=" --maxpoints #" />
+	<field type="string" required="true" name="minpoints" desc="Min number of points" order="4" repr=" --minpoints #" />
+	<field type="string" required="true" name="model" desc="Model" order="5" repr=" --model #" />
+	<field type="string" required="true" name="nugget" desc="Nugget" order="6" repr=" --nugget #" />
+	<field type="string" required="true" name="sill" desc="Sill" order="7" repr=" --sill #" />
+	<field type="string" required="true" name="range" desc="Range" order="8" repr=" --range #" />
+	<field type="string" required="true" name="searchradius" desc="Searchradius" order="9" repr=" --searchradius #" />
+	<field type="fileopen" required="true" name="inputvalues" desc="Input values" order="10" repr=" --itscalar-inputvalues #" />
+	<field type="fileopen" required="true" name="positions" desc="Input positions shapefile" order="11" repr=" --ishapefile-positions #" />
+	<field type="fileopen" required="true" name="interpolatedpositions" desc="Input interpolated positions shapefile" order="12" repr=" --ishapefile-interpolatedpositions #" />
+	<field type="file" required="true" name="outputvalues" desc="Interpolated values" order="13" repr=" --oscalar-outputvalues #" />
+</command>

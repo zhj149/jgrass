@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="g.setgrassenv" name="g.setgrassenv">
+    <field desc="setgrassenv" name="setgrassenv" order="0" repr=" #" required="true" type="folder"/>
+    <i18n key="setgrassenv" en="set the path to the Grass installation" it="settare il percorso dell'installazione di GRASS"/>
+</command>

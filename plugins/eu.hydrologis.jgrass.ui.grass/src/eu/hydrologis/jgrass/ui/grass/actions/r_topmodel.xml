@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="v.topmodel" name="v.topmodel">
+	<field desc="Basin mask map" name="basin" order="0" repr=" ibasin=#" required="true" type="rastermap" />		
+	<field desc="Elevation map" name="elevation" order="1" repr=" elevation=#" required="true" type="rastermap" />
+	<check name="Define a number of topographic index classes" required="false" order="2" repr=" " >
+		<field type="string" required="false" name="nidxclass" desc="number of classes" order="0" repr=" nidxclass=#" default="30" />
+	</check>
+	<field desc="Topographic index statistics file" name="idxstats" order="3" repr=" idxstats=#" required="true" type="fileopen" />
+	<field desc="TOPMODEL Parameters file" name="parameters" order="4" repr=" parameters=#" required="true" type="fileopen" />
+	<field desc="Rainfall and potential evapotranspiration data file" name="input" order="5" repr=" input=#" required="true" type="fileopen" />
+	<check name="Insert an observed flow file" required="false" order="6" repr=" " >
+		<field desc="Observed flow file" name="input" order="0" repr=" Qobs=#" required="false" type="fileopen" />
+	</check>
+	<field desc="Output file" name="output" order="7" repr=" output=#" required="true" type="file" />
+</command>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.d2o3d" name="h.d2o3d">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="flow" name="flow" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="d2o3d" name="slope" order="2" repr=" --ograss-d2o3d #" required="true" type="string"/>
+    <i18n key="pit" en="input depitted elevations map" it="raster delle elevazione depittato in ingresso"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="d2o3d" en="3D distance to oulet output map" it="mappa delle distanze 3D dalla chiusura in uscita"/>   
+</command>

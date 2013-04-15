@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="r.to.vect" desc="r.to.vect">
+	<field type="rastermap" required="true" name="input" desc="Input raster map" order="0" repr=" --igrass-in #" />
+	<exclusiveOption name="Type of the resulting geometry" required="true" order="1" repr="" >
+		<option type="check" required="true" name="point" desc="Output point geometry" order="0" repr=" --mode POINT" />
+		<option type="check" required="true" name="polygon" desc="Output polygon geometry" order="1" repr=" --mode POLYGON" />
+	</exclusiveOption>
+	<field type="file" required="true" name="shape" desc="output shapefile" order="2" repr=" --oshapefile-out #" />
+</command>

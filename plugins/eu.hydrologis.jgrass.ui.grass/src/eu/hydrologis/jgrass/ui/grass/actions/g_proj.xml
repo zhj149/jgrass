@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="g.proj" name="g.proj">
+	<exclusiveOption name="excl" required="true" order="0">
+		<option desc="Print projection information in GRASS format" name="pro" order="0" repr=" -p" required="false">
+		</option>
+		<option desc="Print projection information in WKT format" name="wkt" order="1" repr=" -w" required="false">
+		</option>
+	</exclusiveOption>
+</command>

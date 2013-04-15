@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JGrass Database Plugin
+Bundle-SymbolicName: eu.hydrologis.jgrass.database;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: eu.hydrologis.jgrass.database.DatabasePlugin
+Bundle-Vendor: HydroloGIS s.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.hydrologis.jgrass.extlibs;bundle-version="1.0.0",
+ net.refractions.udig.libs;bundle-version="1.2.0",
+ net.refractions.udig.project.ui;bundle-version="1.2.0"
+Bundle-ActivationPolicy: lazy
+Export-Package: eu.hydrologis.jgrass.database,
+ eu.hydrologis.jgrass.database.core,
+ eu.hydrologis.jgrass.database.core.h2,
+ eu.hydrologis.jgrass.database.core.postgres,
+ eu.hydrologis.jgrass.database.earlystartup,
+ eu.hydrologis.jgrass.database.interfaces,
+ eu.hydrologis.jgrass.database.utils,
+ eu.hydrologis.jgrass.database.view
+Eclipse-BuddyPolicy: global

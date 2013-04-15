@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.pfafstetter" desc="Pfafstetter">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map along the network" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="hacks" desc="input hackstream map" order="1" repr=" --igrass-hacks #" />
+	<field type="rastermap" required="true" name="pit" desc="input depitted elevation map" order="2" repr=" --igrass-pit #" />
+	<field type="rastermap" required="true" name="netnum" desc="input enumerated network map" order="3" repr=" --igrass-netnumber #" />
+	<exclusiveOption name="mode" required="true" order="4">
+		<option name="standard mode" order="1" repr=" --mode 0">
+		</option>
+		<option name="use a map with numbered channel" order="2" repr=" --mode 1">
+			<field type="rastermap" required="true" name="channel" desc="input numbered channel map" order="0" repr=" --igrass-channel #" />
+			<field type="fileopen" required="true" name="channel" desc="input stream network shapefile" order="1" repr=" --ishapefile-netshape #" />
+		</option>
+	</exclusiveOption>
+	<field type="file" required="true" name="out" desc="output pfafstetter network shapefile" order="5" repr=" --oshapefile-netshapeout #" />
+</command>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.hacklength" name="h.hacklength">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="tca" name="tca" order="1" repr=" --igrass-tca #" required="true" type="rastermap"/>
+    <field desc="hacklength" name="hacklength" order="2" repr=" --ograss-hackl #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="tca" en="input total contributing area map" it="mappa delle aree totali contribuenti in ingresso"/>
+    <i18n key="hacklength" en="hack distances output map" it="mappa delle lunghezze di Hack in uscita"/>
+</command>

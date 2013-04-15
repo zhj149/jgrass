@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.nabla" desc="Nabla">
+	<field type="rastermap" required="true" name="pit" desc="depitted elevation map" order="0" repr=" --igrass-pit #" />
+	<field type="string" required="true" name="nabla" desc="output nabla map" order="1" repr=" --ograss-nabla #" />
+	<exclusiveOption name="mode" required="true" order="2">
+		<option name="classes" order="1" repr=" --mode 0">
+			<field type="double" required="true" name="threshold" desc="threshold" order="0" repr=" --threshold #" />
+		</option>
+		<option name="real values" order="2" repr=" --mode 1">
+		</option>
+	</exclusiveOption>
+</command>

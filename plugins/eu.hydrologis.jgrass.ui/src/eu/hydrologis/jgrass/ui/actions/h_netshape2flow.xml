@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.netshape2flow" desc="Netshape2flow">
+	<field type="fileopen" required="true" name="netshp" desc="input stream network shapefile" order="0" repr=" --ishapefile-netshape #" />
+	<check name="use a field in the shapefile to define whether to process a feature or not" required="false" order="1" repr="" >
+		<field type="string" required="false" name="active" desc="shapefile field to define the active stream links" order="0" repr=" --activefield #" />
+	</check>	
+	<check name="create a problems layer with the indication of the problem points" required="false" order="2" repr=" --createproblemshp true" />
+	<check name="use a field in the shapefile to define the stream network enumeration" required="false" order="3" repr="" >
+		<field type="string" required="false" name="active" desc="shapefile field to define the active stream links" order="0" repr=" --idfield #" />
+	</check>
+	<field type="string" required="true" name="flownet" desc="output drainage directions along the network map" order="4" repr=" --ograss-flownet #" />
+	<field type="string" required="true" name="netnum" desc="output raster network map with enumerated streams" order="5" repr=" --ograss-channelnet #" />
+
+</command>

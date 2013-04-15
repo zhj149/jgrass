@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.mosaic" name="r.mosaic">
+    <field desc="Comma separated input map names" name="input" order="0" repr=" --input #" required="true" type="string"/>
+    <field desc="Output map name" name="output" order="1" repr=" --output # --oscalar-out *" required="true" type="string"/>
+</command>

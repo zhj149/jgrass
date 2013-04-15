@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.energybalance" desc="Energy Balance Calculator">
+	<field type="string" required="true" name="idfield" desc="Field of the basin id" order="0" repr=" --idfield #" />
+	<field type="fileopen" required="true" name="basin" desc="Input basins shapefile" order="4" repr=" --ishapefile-basin #" />
+	<field type="fileopen" required="true" name="rain" desc="Input rain" order="5" repr=" --itscalar-rain #" />
+	<field type="fileopen" required="true" name="temperature" desc="Input temperature" order="6" repr=" --itscalar-temperature #" />
+	<field type="fileopen" required="true" name="wind" desc="Input wind" order="7" repr=" --itscalar-wind #" />
+	<field type="fileopen" required="true" name="pressure" desc="Input pressure" order="8" repr=" --itscalar-pressure #" />
+	<field type="fileopen" required="true" name="humidity" desc="Input humidity" order="9" repr=" --itscalar-humidity #" />
+	<field type="fileopen" required="true" name="energy" desc="Input energy" order="10" repr=" --iscalar-energy #" />
+	<field type="fileopen" required="true" name="area" desc="Input area" order="11" repr=" --iscalar-area #" />
+	<field type="fileopen" required="true" name="dtday" desc="Input dtday" order="12" repr=" --itscalar-dtday #" />
+	<field type="fileopen" required="true" name="dtmonth" desc="Input dtmonth" order="13" repr=" --itscalar-dtmonth #" />
+	<check name="Path and name of the input safe point data" required="false" order="14" repr="" >
+		<field type="fileopen" required="false" name="spreadpath" desc="input safe point file" order="0" repr=" --spreadpath #" />
+	</check>
+	<check name="Path and name of the output safe point data" required="false" order="15" repr="" >
+		<field type="file" required="false" name="spwritepath" desc="output safe point file" order="0" repr=" --spwritepath #" />
+	</check>
+	<exclusiveOption name="output" required="true" order="16">
+	<option name="Main energy balance output" order="1" repr=" ">
+		<field type="file" order="1" required="false" name="adige" desc="Main energybalance output" repr=" --oscalar-main #" />
+	</option>
+	<option name="Energybalance output for h.adige" order="2" repr=" ">
+	<field type="file" order="2" required="false" name="main" desc="Output file for h.adige" repr=" --oscalar-adige #" />
+	</option>
+	</exclusiveOption>
+</command>

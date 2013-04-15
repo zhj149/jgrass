@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="Extractnetwork" name="h.extractnetwork">
+	<field type="rastermap" required="true" name="flow" desc="input map of flowdirections" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="tca" desc="input map of total contributing areas" order="1" repr=" --igrass-tca #" />
+	<exclusiveOption name="mode" required="true" order="2">
+		<option name="threshold on tca" order="1" repr=" --mode 0">
+			<field type="double" required="true" name="threshold" desc="threshold on total contributing area" repr=" --threshold #" />
+			<field type="string" name="net" required="true" desc="output stream network map" repr=" --ograss-net #" />
+			<field type="file" name="netshape" required="false" desc="output network shapefile" repr=" --oshapefile-netshape #" />
+		</option>
+		<option name="threshold on tangential stress" order="2" repr=" --mode 1">
+			<field type="rastermap" name="slope" required="true" desc="input map of slope" repr=" --igrass-slope #" />
+			<field type="double" required="true" name="threshold" desc="threshold on  tangential stress" repr=" --threshold #" />
+			<field type="string" name="net" required="true" desc="output stream network map" repr=" --ograss-net #" />
+			<field type="file" name="netshape" required="false" desc="output network shapefile" repr=" --oshapefile-netshape #" />
+		</option>
+		<option name="threshold on tangential stress only in convergent sites" order="3" repr=" --mode 2">
+			<field type="rastermap" name="classi" required="true" desc="input aggregated topographic classes  map" repr=" --igrass-class #" />
+			<field type="double" required="true" name="threshold" desc="threshold on tangential stress only in convergent sites" repr=" --threshold #" />
+			<field type="string" name="net" required="true" desc="output stream network map" repr=" --ograss-net #" />
+			<field type="file" name="netshape" required="false" desc="output network shapefile" repr=" --oshapefile-netshape #" />
+		</option>
+	</exclusiveOption>
+</command>

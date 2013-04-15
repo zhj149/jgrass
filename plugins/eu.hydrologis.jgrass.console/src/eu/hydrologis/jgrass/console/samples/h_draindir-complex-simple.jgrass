@@ -1,0 +1,14 @@
+/* h.draindir
+			--igrass-pit pit
+			--igrass-flow [ h.flow --igrass-pit pit --ograssascii-flow * ]
+			--ograss-dir draindir
+			--ograss-tca tca
+ */
+jgrass {
+
+	h.draindir
+		--igrass-pit "/was ist los/pit"
+		--igrass-flow [ h.flow --igrass-pit pit --ograssascii-flow * ]
+		--ograss-dir draindir
+		--ograss-tca tca
+}

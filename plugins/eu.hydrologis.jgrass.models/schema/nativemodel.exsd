@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Schema file written by PDE -->
+<schema targetNamespace="eu.hydrologis.jgrass.models" xmlns="http://www.w3.org/2001/XMLSchema">
+<annotation>
+      <appinfo>
+         <meta.schema plugin="eu.hydrologis.jgrass.models" id="eu.hydrologis.jgrass.models.nativemodel" name="nativemodel"/>
+      </appinfo>
+      <documentation>
+         This extention point creates the necessary wraps and operating system tweaks around the native GRASS commands, making them so executable from within the JGrass Console Engine.
+      </documentation>
+   </annotation>
+
+   <element name="extension">
+      <complexType>
+         <sequence minOccurs="1" maxOccurs="unbounded">
+            <element ref="nativemodel" minOccurs="0" maxOccurs="unbounded"/>
+         </sequence>
+         <attribute name="point" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="id" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+            </annotation>
+         </attribute>
+         <attribute name="name" type="string">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <element name="nativemodel">
+      <complexType>
+         <sequence minOccurs="0" maxOccurs="1">
+         </sequence>
+         <attribute name="commandname" type="string" use="required">
+            <annotation>
+               <documentation>
+                  
+               </documentation>
+               <appinfo>
+                  <meta.attribute translatable="true"/>
+               </appinfo>
+            </annotation>
+         </attribute>
+         <attribute name="guixml" type="string">
+            <annotation>
+               <documentation>
+                  &lt;p&gt;A correct xml file content that can represent the command as off the uibuilder guidelines. This string will be correctly placed in the system as a file and taken as gui definition for the command.&lt;/p&gt;
+
+&lt;p&gt;
+For example for &lt;b&gt;h.pitfiller&lt;/b&gt; the gui definition is:&lt;/p&gt;
+
+&lt;i&gt;
+&amp;lt;command descr=&quot;h.pitfiller&quot; name=&quot;h.pitfiller&quot;&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;field desc=&quot;in&quot; name=&quot;input&quot; order=&quot;0&quot;
+repr=&quot;--igrass-elevation #&quot; required=&quot;true&quot; type=&quot;rastermap&quot;/&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;field desc=&quot;out&quot; name=&quot;output&quot; order=&quot;1&quot;
+repr=&quot;--ograss-pit #&quot; required=&quot;true&quot; type=&quot;string&quot;/&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;i18n key=&quot;in&quot; en=&quot;input elevation map&quot; it=&quot;mappa
+di elevazione in ingresso&quot;/&amp;gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;i18n key=&quot;out&quot; en=&quot;depitted output map&quot;
+it=&quot;mappa depittata in uscita&quot;/&amp;gt;&lt;br&gt;
+&amp;lt;/command&amp;gt;&lt;br&gt;&lt;/i&gt;
+               </documentation>
+            </annotation>
+         </attribute>
+      </complexType>
+   </element>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="since"/>
+      </appinfo>
+      <documentation>
+         [Enter the first release in which this extension point appears.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="examples"/>
+      </appinfo>
+      <documentation>
+         [Enter extension point usage example here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="apiinfo"/>
+      </appinfo>
+      <documentation>
+         [Enter API information here.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="implementation"/>
+      </appinfo>
+      <documentation>
+         [Enter information about supplied implementation of this extension point.]
+      </documentation>
+   </annotation>
+
+   <annotation>
+      <appinfo>
+         <meta.section type="copyright"/>
+      </appinfo>
+      <documentation>
+         /*
+ * JGrass - Free Open Source Java GIS http://www.jgrass.org 
+ * (C) HydroloGIS - www.hydrologis.com 
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+ */
+      </documentation>
+   </annotation>
+
+</schema>

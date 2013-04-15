@@ -1,0 +1,4 @@
+<command name="test" desc="Test Command">
+	<field type="string" name="a" desc="A string" repr="--a=#" order="1" />
+	<field type="int" output="true" name="b" desc="An integer" repr="b #" order="2" />
+</command>

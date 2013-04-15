@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.disteuclidea" desc="Disteuclidea">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<field type="string" required="true" name="dist" desc="dist" order="2" repr=" --ograss-dist #" />
+	<i18n key="dist" en="euclidea distance output map" it="mappa della distanza euclidea in uscita"/>
+</command>

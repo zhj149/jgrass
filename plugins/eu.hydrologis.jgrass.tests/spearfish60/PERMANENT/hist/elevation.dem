@@ -1,0 +1,14 @@
+Tue Mar 14 07:15:44 1989
+elevation
+PERMANENT
+grass
+cell
+7.5 minute Digital Elevation Model (DEM) produced by the USGS
+
+Elevation above mean sea level in meters for spearfish database
+DEM was distributed on 1/2 inch tape and was extracted using
+GRASS DEM tape reading utilities.  Data was originally in feet
+and was converted to meters using the GRASS map calculator
+(Gmapcalc).  Data was originally supplied for both the
+Spearfish and Deadwood North USGS 1:24000 scale map series
+quadrangles and was patched together using GRASS

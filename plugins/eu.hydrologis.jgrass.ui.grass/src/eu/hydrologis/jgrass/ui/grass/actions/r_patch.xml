@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.patch" name="r.patch">
+	<field desc="Name of the first raster map" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="name of the second raster map" name="input2" order="1" repr=",#" required="true" type="rastermap" />
+	<field desc="allow output maps to override existing maps" name="over" order="2" repr=" --o" required="false" type="check" />
+	<field desc="Use zero (0) for transparency instead of NULL" name="zero" order="3" repr=" -z" required="false" type="check" />
+	<field desc="Name of the resultant map" name="output" order="4" repr=" output=#" required="true" type="string" />
+</command>

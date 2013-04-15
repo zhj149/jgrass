@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Grass Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.ui.grass;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.ui.grass.GrassUiPlugin
+Bundle-Vendor: HydroloGIS s.r.l.
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.hydrologis.jgrass.uibuilder,
+ eu.hydrologis.jgrass.ui.console,
+ net.refractions.udig.libs;bundle-version="1.2.0"
+Eclipse-LazyStart: true

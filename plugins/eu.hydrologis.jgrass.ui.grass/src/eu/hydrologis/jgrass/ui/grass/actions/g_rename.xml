@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="g.rename" name="g.rename">
+	<field desc="map to be renamed" name="rast" order="0" repr=" rast=#" required="true" type="rastermap" />
+	<field desc="new name for the map" name="ren" order="1" repr=",#" required="true" type="string" />
+</command>

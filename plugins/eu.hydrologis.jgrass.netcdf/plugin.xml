@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="net.refractions.udig.catalog.ServiceExtension">
+      <service
+            class="eu.hydrologis.jgrass.netcdf.service.NetcdfServiceExtension"
+            id="eu.hydrologis.jgrass.netcdf.netcdfservice"
+            name="Netcdf Dataset Service">
+      </service>
+   </extension>
+   <extension
+         point="net.refractions.udig.catalog.ui.connectionFactory">
+      <factory
+            class="eu.hydrologis.jgrass.netcdf.service.NetcdfConnectionFactory"
+            id="eu.hydrologis.jgrass.netcdf.service.NetcdfConnectionFactory">
+      </factory>
+      <wizardPage
+            banner="icons/plot.gif"
+            class="eu.hydrologis.jgrass.netcdf.service.NetcdfWizardPage"
+            description="%wizard.description"
+            icon="icons/netcdf.gif"
+            id="eu.hydrologis.jgrass.netcdf.service.netcdfwizardpage"
+            name="%wizard.name">
+      </wizardPage>
+   </extension>
+   <extension
+         point="net.refractions.udig.catalog.ui.fileFormat">
+      <fileService
+            fileExtension="*.nc"
+            name="%fileService.name">
+      </fileService>
+   </extension>
+   <extension
+         id="NetcdfRasterRenderer"
+         name="NetcdfRasterRenderer"
+         point="net.refractions.udig.project.renderer">
+      <renderer
+            class="eu.hydrologis.jgrass.netcdf.renderer.NetcdfRenderMetricsFactory"
+            id="eu.hydrologis.jgrass.netcdf.rasterrender"
+            name="Netcdf Raster Renderer">
+         <description>
+            A renderer for Netcdf raster layers.
+         </description>
+      </renderer>
+   </extension>
+   <extension
+         point="net.refractions.udig.project.layerInterceptor">
+      <layerAdded
+            class="eu.hydrologis.jgrass.netcdf.interceptor.NetcdfTimeElevationInterceptor"
+            id="eu.hydrologis.jgrass.netcdf.layerAddedInterceptor"
+            name="Netcdf Time Elevation Interceptor">
+      </layerAdded>
+   </extension>
+   <extension
+         point="net.refractions.udig.ui.operation">
+      <operation
+            class="eu.hydrologis.jgrass.netcdf.netcdfviewer.NetcdfViewerOperation"
+            enablesFor="1"
+            icon="icons/netcdf.gif"
+            id="eu.hydrologis.jgrass.netcdf.netcdfviewer.NetcdfViewerOperation"
+            name="Open Netcdf Viewer on this dataset"
+            targetClass="eu.hydrologis.jgrass.netcdf.service.NetcdfService">
+         <enablement></enablement>
+      </operation>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="eu.hydrologis.jgrass.netcdf.netcdfcategory"
+            class="eu.hydrologis.jgrass.netcdf.netcdfviewer.NetcdfView"
+            fastViewWidthRatio="0.95"
+            icon="icons/netcdf.gif"
+            id="eu.hydrologis.jgrass.netcdf.netcdfviewer.netcdfview"
+            name="Netcdf Data Viewer"
+            restorable="true">
+      </view>
+      <category
+            id="eu.hydrologis.jgrass.netcdf.netcdfcategory"
+            name="Netcdf">
+      </category>
+   </extension>
+
+</plugin>

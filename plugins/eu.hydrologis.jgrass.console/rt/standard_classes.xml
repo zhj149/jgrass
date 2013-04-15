@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<import name="Argument" class="nl.alterra.openmi.sdk.backbone.Argument" />
+	<import name="Link" class="nl.alterra.openmi.sdk.backbone.Link" />
+	<import name="LinkableComponent" class="nl.alterra.openmi.sdk.backbone.LinkableComponent" />
+	<import name="ScalarSet" class="nl.alterra.openmi.sdk.backbone.ScalarSet" />
+	<import name="IValueSet" class="org.openmi.standard.IValueSet" />
+	<import name="IArgument" class="org.openmi.standard.IArgument" />
+	<import name="ILink" class="org.openmi.standard.ILink" />
+	<import name="ILinkableComponent" class="org.openmi.standard.ILinkableComponent" />
+	<import name="ITime" class="org.openmi.standard.ITime" />
+	<import name="JGrassFeatureValueSet" class="eu.hydrologis.openmi.JGrassFeatureValueSet" />
+	<import name="JGrassRasterValueSet" class="eu.hydrologis.openmi.JGrassRasterValueSet" />
+	<import name="HydrologisDate" class="eu.hydrologis.openmi.util.HydrologisDate" />
+	<import name="BufferedReader" class="java.io.BufferedReader" />
+	<import name="DateFormat" class="java.text.DateFormat" />
+	<import name="Date" class="java.util.Date" />
+	<import name="Exception" class="java.lang.Exception" />
+	<import name="File" class="java.io.File" />
+	<import name="FileReader" class="java.io.FileReader" />
+	<import name="FileWriter" class="java.io.FileWriter" />
+	<import name="IllegalArgumentException" class="java.lang.IllegalArgumentException" />
+	<import name="IndexOutOfBoundsException" class="java.lang.IndexOutOfBoundsException" />
+	<import name="InputStreamReader" class="java.io.InputStreamReader" />
+	<import name="IOException" class="java.io.IOException" />
+	<import name="Locale" class="java.util.Locale" />
+	<import name="Long" class="java.lang.Long" />
+	<import name="Map" class="java.util.Map" />
+	<import name="NullPointerException" class="java.lang.NullPointerException" />
+	<import name="Object" class="java.lang.Object" />
+	<import name="Process" class="java.lang.Process" />
+	<import name="ProcessBuilder" class="java.lang.ProcessBuilder" />
+	<import name="RasterData" class="eu.hydrologis.jgrass.libs.map.RasterData" />
+	<import name="Reader" class="java.io.Reader" />
+	<import name="RuntimeException" class="java.lang.RuntimeException" />
+	<import name="SecurityException" class="java.lang.SecurityException" />
+	<import name="Writer" class="java.io.Writer" />
+	<import name="FeatureCollection" class="org.geotools.feature.FeatureCollection" />
+	<import name="FeatureIterator" class="org.geotools.feature.FeatureIterator" />
+	<import name="SimpleFeature" class="org.opengis.feature.simple.SimpleFeature" />
+	<import name="Coordinate" class="com.vividsolutions.jts.geom.Coordinate" />
+	<import name="Geometry" class="com.vividsolutions.jts.geom.Geometry" />
+	<import name="DecimalFormat" class="java.text.DecimalFormat" />
+	<import name="SimpleDateFormat" class="java.text.SimpleDateFormat" />
+	<import name="ConsoleHelper" class="eu.hydrologis.jgrass.libs.scripting.ConsoleHelper" />
+</document>

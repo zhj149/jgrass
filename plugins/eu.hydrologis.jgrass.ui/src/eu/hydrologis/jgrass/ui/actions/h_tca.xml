@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.tca" name="h.tca">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="tca" name="tca" order="1" repr=" --ograss-tca #" required="true" type="string"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di drenaggio in ingresso"/>
+    <i18n key="tca" en="total contributing area output map" it="mappa delle aree totali contribuenti in uscita"/>
+</command>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.composite" name="r.composite">
+	<field desc="name of raster map layer to be used as RED" name="red" order="0" repr=" red=#" required="true" type="rastermap" />
+	<field desc="name of raster map layer to be used as GREEN" name="green" order="1" repr=" green=#" required="true" type="rastermap" />
+	<field desc="name of raster map layer to be used as BLUE" name="blue" order="2" repr=" blue=#" required="true" type="rastermap" />
+	<check name="insert number of levels to be used for each component (1-256)" required="false" order="3" repr=" " >
+		<field type="double" required="false" name="active" desc="levels (1-256)" order="0" repr=" levels=#" default="32"/>
+	</check>
+	<check name="insert number of levels to be used for RED (1-256)" required="false" order="4" repr=" " >
+	<field desc="levels (1-256)" name="lev_red" order="0" repr=" lev_red=#" required="false" type="string"/>
+	</check>
+	<check name="insert number of levels to be used for GREEN (1-256)" required="false" order="5" repr=" " >
+	<field desc="levels (1-256)" name="lev_green" order="0" repr=" lev_green=#" required="false" type="string"/>
+	</check>
+	<check name="insert number of levels to be used for BLUE (1-256)" required="false" order="6" repr=" " >
+	<field desc="levels (1-256)" name="lev_blue" order="0" repr=" lev_blue=#" required="false" type="string"/>
+	</check>
+	<field desc="Dither" name="dither" order="7" repr=" -d" required="false" type="check" />
+	<field desc="use closest color" name="close" order="8" repr=" -c" required="false" type="check" />
+	<field desc="allow output maps to override existing maps" name="over" order="9" repr=" --o" required="false" type="check" />
+	<field desc="output raster map" name="output" order="10" repr=" output=#" required="true" type="string" />
+</command>

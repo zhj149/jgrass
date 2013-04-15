@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.exportWizards">
+      <wizard
+            class="eu.hydrologis.jgrass.netcdf.export.wizard.NetcdfExportWizard"
+            icon="icons/netcdf.gif"
+            id="eu.hydrologis.jgrass.netcdf.export.wizard"
+            name="Export Grass rasters to Netcdf ">
+      </wizard>
+   </extension>
+
+</plugin>

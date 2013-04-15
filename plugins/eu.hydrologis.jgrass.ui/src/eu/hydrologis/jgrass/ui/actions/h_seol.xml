@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.seol" name="h.seol">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="quantity" name="quantity" order="1" repr=" --igrass-quantity #" required="true" type="rastermap"/>
+    <field desc="net" name="net" order="2" repr=" --igrass-net #" required="true" type="rastermap"/>
+    <exclusiveOption name="mode" required="true" order="3">
+		<option name="normal mode" required="true" order="1" repr=" --mode 0">
+		</option>
+		<option name="compressed mode" required="true" order="2" repr=" --mode 1">
+		</option>
+	</exclusiveOption>
+    <field desc="seol" name="seol" order="4" repr=" --ograss-seol #" required="true" type="string"/>
+    <field desc="shapeseol" name="shapeseol" order="5" repr=" --oshapefile-seolshape  #" required="true" type="file"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di flusso in ingresso"/>
+    <i18n key="quantity" en="input map containing the map to examinate" it="mappa contenente la quantità da analizzare"/>   
+    <i18n key="net" en="input channel network map" it="mappa del reticolo idrografico in ingresso"/>   
+    <i18n key="seol" en="output seol map" it="mappa di seol in uscita"/>   
+    <i18n key="shapeseol" en="output seol shapefile" it="shapefile di seol in uscita"/>   
+</command>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.sun" name="r.sun">
+	<field desc="Name of the input elevation raster map [meters]" name="elevin" order="0" repr=" elevin=#" required="true" type="rastermap" />
+	<field desc="Name of the input aspect map [decimal degrees]" name="aspin" order="1" repr=" aspin=#" required="true" type="rastermap" />
+	<field desc="Name of the input slope raster map [decimal degrees]" name="slopein" order="2" repr=" slopein=#" required="true" type="rastermap" />
+<!--	<exclusiveOption name="linke" required="false" order="3">
+ 	<field desc="Name of the Linke atmospheric turbidity coefficient input raster map" name="linkein" order="0" repr=" linkein=#" required="false" type="rastermap" />  -->
+	<field desc="A single value of the Linke atmospheric turbidity coefficient" name="lin" order="3" repr=" lin=#" required="false" type="string" default="3.0" />
+<!--	</exclusiveOption> -->
+<!--	<exclusiveOption name="albedo" required="false" order="4">
+	<field desc="Name of the ground albedo coefficient input raster map" name="latin" order="0" repr=" latin=#" required="false" type="rastermap" /> -->
+	<field desc="A single value of latitude [decimal degrees]" name="lat" order="4" repr=" lat=#" required="false" type="string"/>
+<!--	</exclusiveOption> -->
+<!--	<exclusiveOption name="latitude" required="false" order="5">
+	<field desc="Name of the latitudes input raster map [decimal degrees]" name="albedo" order="0" repr=" albedo=#" required="false" type="rastermap" /> -->
+	<field desc="A single value of the ground albedo coefficient" name="alb" order="5" repr=" alb=#" required="false" type="string" default="0.2" />
+<!--	</exclusiveOption> -->
+	<field desc="No. of day of the year (1-365)" name="day" order="6" repr=" day=#" required="true" type="int"/>
+	<field desc="Time step when computing all-day radiation sums [decimal hours]" name="step" order="7" repr=" step=#" required="true" type="double" default="0.5"/>
+	<field desc="Incorporate the shadowing effect of terrain" name="shadow" order="8" repr=" -s" required="false" type="check" />
+	<field desc="Allow output maps to override existing maps" name="over" order="9" repr=" --o" required="false" type="check" />
+ 	<exclusiveOption name="mode" required="false" order="10"> 
+		<check name="mode" desc="Compute the elaborations for all the day" required="false" order="1" repr=" " >  
+			<field desc="Local (solar) time [decimal hours]" name="time" order="0" repr=" time=#" required="true" type="string"/>
+			<field desc="Output incidence angle raster map for the given day" name="incidout" order="1" repr=" incidout=#" required="false" type="string" />
+			<field desc="Output beam irradiance [W.m-2] for the given day" name="beam_rad" order="2" repr=" beam_rad=#" required="false" type="string" />
+			<field desc="Output diffuse irradiance [W.m-2] for the given day" name="diff_rad" order="3" repr=" diff_rad=#" required="false" type="string" />
+			<field desc="Output ground reflected irradiance [W.m-2] for the given day" name="refl_rad" order="4" repr=" refl_rad=#" required="false" type="string" />
+		</check>
+		<check name="mode2" desc="Give a specific time" required="false" order="2" repr=" " >
+			<field desc="Output dayly irradiation raster map [Wh.m-2.day-1]" name="beam_rad" order="0" repr=" beam_rad=#" required="false" type="string" />
+			<field desc="Output dayly insolation time raster map [h]" name="insol_time" order="1" repr=" insol_time=#" required="false" type="string" />
+			<field desc="Output dayly irradiation raster map [Wh.m-2.day-1]" name="diff_rad" order="2" repr=" diff_rad=#" required="false" type="string" />
+			<field desc="Output dayly irradiation raster map [Wh.m-2.day-1]" name="refl_rad" order="3" repr=" refl_rad=#" required="false" type="string" />
+ 	</check>
+  	</exclusiveOption>
+</command>

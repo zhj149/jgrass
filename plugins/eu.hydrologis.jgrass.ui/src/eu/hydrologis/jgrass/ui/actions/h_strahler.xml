@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.strahler" desc="Strahler">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<exclusiveOption name="mode" required="true" order="1">
+		<option name="whole basin" order="1" repr=" --mode 0">
+			<field type="string" required="true" name="strahler" desc="strahler" order="0" repr=" --ograss-strahler #" />
+		</option>
+		<option name="only on network" order="2" repr=" --mode 1">
+			<field type="rastermap" required="true" name="net" desc="input stream network map" order="0" repr=" --igrass-net #" />
+			<field type="string" required="true" name="strahler" desc="strahler" order="0" repr=" --ograss-strahler #" />
+		</option>
+	</exclusiveOption>
+	<i18n key="strahler" en="output Strahler map" it="mappa con la numerazione di Strahler in uscita"/>
+</command>

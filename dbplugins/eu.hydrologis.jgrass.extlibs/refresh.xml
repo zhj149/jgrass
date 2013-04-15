@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<project name="refresh_libs" default="build" basedir="." xmlns:rsel="antlib:org.apache.tools.ant.types.resources.selectors" xmlns:artifact="antlib:org.apache.maven.artifact.ant">
+
+	<property name="lib" value="${basedir}/libs" />
+
+	<description>Download open source jars from the internet.</description>
+	<property environment="env" />
+	<dirname file="${ant.file.refresh_libs}" property="refresh_libs_basedir" />
+	<property file="${refresh_libs_basedir}/copy.properties" />
+
+	<artifact:remoteRepository id="udig.snapshot.repository" url="${updateSnapshotURL}" />
+	<artifact:remoteRepository id="udig.stable.repository" url="${updateStableURL}" />
+	<artifact:remoteRepository id="remote.repository" url="${mirror1}" />
+	<artifact:remoteRepository id="jaitoolsmaven.repository" url="${jaitoolsmaven}" />
+	<artifact:remoteRepository id="geosolutionsmaven.repository" url="${geosolutionsmaven}" />
+	<artifact:remoteRepository id="jgrasstoolsmaven.repository" url="${jgrasstoolsmaven}" />
+	<!-- 
+	<artifact:remoteRepository id="hibernatespatial.repository" url="${hibernatespatial}" />
+	-->
+	<target name="clean">
+		<delete dir="${lib}" />
+	</target>
+
+
+	<target name="load_m2_deps">
+		<!-- we can probably replace this with a reference to a pom.xml file -->
+		<!-- Use http://mvnrepository.com/ to look stuff up                  -->
+		<artifact:dependencies filesetId="dependency.fileset" sourcesFilesetId="sources.dependency.fileset" versionsId="dependency.versions" useScope="runtime">
+
+			<remoteRepository refid="udig.stable.repository" />
+			<remoteRepository refid="udig.snapshot.repository" />
+			<remoteRepository refid="remote.repository" />
+			<remoteRepository refid="jaitoolsmaven.repository" />
+			<remoteRepository refid="geosolutionsmaven.repository" />
+			<remoteRepository refid="jgrasstoolsmaven.repository" />
+			<!-- 
+			<remoteRepository refid="hibernatespatial.repository" />
+			-->
+
+			<!-- groovy -->
+			<dependency groupId="org.codehaus.groovy" artifactId="groovy-all" version="1.7.1" />
+
+			<!-- should be local if the jgrasstools project is compiled -->
+			<dependency groupId="eu.hydrologis.jgrass" artifactId="jgrassgears" version="0.1-SNAPSHOT" />
+			<dependency groupId="eu.hydrologis.jgrass" artifactId="hortonmachine" version="0.1-SNAPSHOT" />
+
+	        <dependency groupId="org.scannotation" artifactId="scannotation" version="1.0.2" />
+	        <dependency groupId="com.googlecode.jaitools" artifactId="jiffle" version="1.0.1" />
+	        <dependency groupId="com.googlecode.jaitools" artifactId="zonalstats" version="1.0.1" />
+	        <dependency groupId="com.googlecode.jaitools" artifactId="utils" version="1.0.1" />
+
+			
+			<!-- in the jgrasstools maven repo -->
+			<dependency groupId="oms" artifactId="oms" version="3-SNAPSHOT" />
+			<dependency groupId="jama" artifactId="jama" version="1.0.2" />
+
+			<dependency groupId="org.hibernate" artifactId="ejb3-persistence" version="3.3.2.Beta1" />
+			<dependency groupId="org.hibernate" artifactId="hibernate" version="3.3.2.GA" />
+			<dependency groupId="org.hibernate" artifactId="hibernate-annotations" version="3.4.0.GA" />
+			<dependency groupId="org.hibernate" artifactId="hibernate-commons-annotations" version="3.4.0.GA" />
+			<dependency groupId="javassist" artifactId="javassist" version="3.8.0.GA" />
+			<dependency groupId="joda-time" artifactId="joda-time-hibernate" version="1.1" />
+			<!-- 
+			<dependency groupId="org.slf4j" artifactId="slf4j-simple" version="1.5.8" />
+			<dependency groupId="org.slf4j" artifactId="slf4j-nop" version="1.5.8" />
+			-->
+			<dependency groupId="antlr" artifactId="antlr" version="2.7.7" />
+			<!-- 
+			<dependency groupId="jfreechart" artifactId="jcommon" version="1.0.16" />
+			<dependency groupId="jfreechart" artifactId="jfreechart-experimental" version="1.0.13" />
+			<dependency groupId="jfreechart" artifactId="jfreechart-swt" version="1.0.13" />
+			<dependency groupId="jfreechart" artifactId="swtgraphics2d" version="1.0.13" />
+			<dependency groupId="com.sun.jna" artifactId="jna" version="3.0.9" />
+			<dependency groupId="org.xerial" artifactId="sqlite-jdbc" version="3.6.16" />
+			-->
+
+            <dependency groupId="dom4j" artifactId="dom4j" version="1.6.1" />
+
+
+		</artifact:dependencies>
+
+	</target>
+
+	<target name="print" depends="load_m2_deps">
+		<description>Print the dependencies the jars</description>
+
+		<!--setproxy proxyhost="192.168.20.1" proxyport="8080"/-->
+		<path id="jars">
+			<fileset refid="dependency.fileset" />
+		</path>
+
+		<property name="myjars" refid="jars" />
+
+		<echo message="Jars = ${myjars}" />
+
+		<!--propertyregex property="listjars"
+		              input="${myjars}"
+		              regexp="\;"
+		              select="{$line.seperator}"
+		              casesensitive="false" /-->
+
+		<echo message="Jars = ${myjars}" />
+
+		<echo message="Jars = ${listjars}" />
+	</target>
+
+	<target name="build" depends="load_m2_deps">
+		<description>Download the jars - used by a manual "clean"</description>
+		<available property="already_downloaded" type="dir" file="${lib}" />
+
+		<!--setproxy proxyhost="192.168.20.1" proxyport="8080"/-->
+
+		<antcall target="create" />
+		<antcall target="copy" />
+	</target>
+
+	<target name="create" unless="already_downloaded">
+		<description>creates the lib director if needed</description>
+		<mkdir dir="${lib}" />
+	</target>
+
+	<target name="copy" depends="load_m2_deps">
+		<description>Copies the jars over</description>
+
+		<macrodef name="copyFromPath">
+			<attribute name="todir" />
+			<attribute name="refid" />
+			<element name="nested-resource-selectors" optional="yes" implicit="true" />
+			<sequential>
+				<mkdir dir="@{todir}" taskname="copyFromPath" />
+				<copy todir="@{todir}" taskname="copyFromPath">
+					<restrict>
+						<fileset refid="@{refid}" />
+						<rsel:or>
+							<nested-resource-selectors />
+						</rsel:or>
+					</restrict>
+					<flattenmapper />
+				</copy>
+			</sequential>
+		</macrodef>
+		<copyFromPath refid="dependency.fileset" todir="${lib}">
+			<rsel:name name="*hortonmachine*.jar" />
+			<rsel:name name="*jgrassgears*.jar" />
+			<rsel:name name="*oms*.jar" />
+			<rsel:name name="*jama*.jar" />
+			<rsel:name name="*groovy*.jar" />
+			<rsel:name name="*jline*.jar" />
+			<rsel:name name="*jansi*.jar" />
+			<rsel:name name="*hibernate*.jar" />
+			<rsel:name name="*javassist*.jar" />
+			<rsel:name name="*slf4j*.jar" />
+			<rsel:name name="*ejb3-persistence*.jar" />
+			<rsel:name name="*scannotation*.jar" />
+			<rsel:name name="*jiffle*.jar" />
+			<rsel:name name="*zonalstats*.jar" />
+			<rsel:name name="*gt-imageio-ext-gdal*.jar" />
+			<rsel:name name="*gt-grassraster*.jar" />
+
+			<rsel:name name="*jta*.jar" />
+			<rsel:name name="*antlr*.jar" />
+			<rsel:name name="*jfreechart*.jar" />
+			<rsel:name name="*jcommon*.jar" />
+			<rsel:name name="*swtgraphics2d*.jar" />
+			
+			<rsel:name name="*jiffle*.jar" />
+			<rsel:name name="*utils*.jar" />
+			<rsel:name name="*zonalstats*.jar" />
+			
+			<rsel:name name="*sqlite*.jar" />
+
+			<rsel:name name="*dom4j*.jar" />
+		</copyFromPath>
+	</target>
+
+	<!-- Used by headless build please make sure this does everthing from clean to download and fix etc.. -->
+	<target name="full-build" depends="clean, build" description="clean and build">
+	</target>
+
+</project>

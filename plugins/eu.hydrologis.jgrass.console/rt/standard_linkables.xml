@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <import class="eu.hydrologis.jgrass.models.h.kriging.h_kriging"
+        exchangeitems="inputvalues=0, positions=1, interpolatedpositions=2,outputvalues=0" name="h.kriging"/>
+    <import class="eu.hydrologis.jgrass.models.h.variogram.h_variogram"
+        exchangeitems="inputvalues=0, positions=1,cloud=0" name="h.variogram"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.eicalculator.h_eicalculator"
+        exchangeitems="idbasin=0, elev=1, curvature=2, aspect=3, slopes=4,altimetry=0, energy=1, area=2" name="h.eicalculator"/>
+    <import class="eu.hydrologis.jgrass.models.h.jami.h_jami"
+        exchangeitems="values=0, stations=1, basins=2, altimetry=3,out=0" name="h.jami"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.energybalance.h_energybalance"
+        exchangeitems="basin=0,rain=1,temperature=2,wind=3,pressure=4,humidity=5,energy=6,area=7,dtday=8,dtmonth=9,swe=0,pnet=1,prain=2,psnow=3,rainout=4,tempout=5,adige=6,main=7" name="h.energybalance"/>
+    <import class="eu.hydrologis.jgrass.models.h.saintgeo.h_saintgeo"
+        exchangeitems="qhead=0,qlateral=1,qlateralPosition=2,qconfluence=3,qconfluencePosition=4,sections=5,downstreamlevel=6,out=0" name="h.saintgeo"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap" name="igrassold"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputGrassCoverageReader" name="igrass"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputTiffCoverageReader" name="itiff"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap" name="igrassascii"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap" name="iesrigrid"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap" name="ifluidturtle"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputShapeReader" name="ishapefile"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap" name="ograssold"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassCoverageWriter" name="ograss"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap" name="ograssascii"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap" name="oesrigrid"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputTableFileWriter" name="otable"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap" name="ofluidturtle"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputShapeWriter" name="oshapefile"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.ColorTableMapWriter" name="ocolor"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.CategoriesMapWriter" name="ocats"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputScalarReader" name="iscalar"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputScalarTimeReader" name="itscalar"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputChartWriter" name="ochart"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.InputFeatureLayerReader" name="iflayer"/>
+    <import class="eu.hydrologis.jgrass.models.h.flow.h_flow"
+        exchangeitems="pit=0,flow=0" name="h.flow"/>
+    <import class="eu.hydrologis.jgrass.models.h.tca.h_tca"
+        exchangeitems="flow=0,tca=0" name="h.tca"/>
+    <import class="eu.hydrologis.jgrass.models.h.tca3d.h_tca3d"
+        exchangeitems="pit=0, flow=1,tca3d=0" name="h.tca3d"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.markoutlets.h_markoutlets"
+        exchangeitems="flow=0,mflow=0" name="h.markoutlets"/>
+    <import class="eu.hydrologis.jgrass.models.h.draindir.h_draindir"
+        exchangeitems="pit=0, flow=1, flowfixed=2,dir=0, tca=1" name="h.draindir"/>
+    <import class="eu.hydrologis.jgrass.models.h.pitfiller.h_pitfiller"
+        exchangeitems="elevation=0,pit=0" name="h.pitfiller"/>
+    <import class="eu.hydrologis.jgrass.models.h.gradient.h_gradient"
+        exchangeitems="pit=0,gradient=0" name="h.gradient"/>
+    <import class="eu.hydrologis.jgrass.models.h.aspect.h_aspect"
+        exchangeitems="pit=0,aspect=0, color=1" name="h.aspect"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.extractnetwork.h_extractnetwork"
+        exchangeitems="flow=0, tca=1, slope=2, class=3,net=0, netshape=1" name="h.extractnetwork"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.hacklength.h_hacklength"
+        exchangeitems="flow=0, tca=1,hackl=0" name="h.hacklength"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.hacklength3d.h_hacklength3d"
+        exchangeitems="flow=0, tca=1, pit=2,hackl3d=0" name="h.hacklength3d"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.hackstream.h_hackstream"
+        exchangeitems="flow=0, tca=1, hackl=2, net=3, num=4,hacks=0" name="h.hackstream"/>
+    <import class="eu.hydrologis.jgrass.models.h.slope.h_slope"
+        exchangeitems="pit=0, flow=1,slope=0" name="h.slope"/>
+    <import class="eu.hydrologis.jgrass.models.h.nabla.h_nabla"
+        exchangeitems="pit=0,nabla=0" name="h.nabla"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.curvatures.h_curvatures"
+        exchangeitems="pit=0,prof=0, plan=1, tang=2" name="h.curvatures"/>
+    <import class="eu.hydrologis.jgrass.models.h.d2o.h_d2o"
+        exchangeitems="flow=0,d2o=0" name="h.d2o"/>
+    <import class="eu.hydrologis.jgrass.models.h.d2o3d.h_d2o3d"
+        exchangeitems="pit=0, flow=1,d2o3d=0" name="h.d2o3d"/>
+    <import class="eu.hydrologis.jgrass.models.h.gc.h_gc"
+        exchangeitems="slope=0, net=1, cp9=2,class=0, aggclass=1" name="h.gc"/>
+    <import class="eu.hydrologis.jgrass.models.h.tc.h_tc"
+        exchangeitems="prof=0, tang=1,cp3=0, cp9=1" name="h.tc"/>
+    <import class="eu.hydrologis.jgrass.models.h.h2cd.h_h2cd"
+        exchangeitems="net=0, flow=1,h2cd=0" name="h.h2cd"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.rescaleddistance.h_rescaleddistance"
+        exchangeitems="net=0, flow=1,rdist=0" name="h.rescaleddistance"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.rescaleddistance3d.h_rescaleddistance3d"
+        exchangeitems="net=0, flow=1, pit=2,rdist3d=0" name="h.rescaleddistance3d"/>
+    <import class="eu.hydrologis.jgrass.models.h.ab.h_ab"
+        exchangeitems="plan=0, tca=1,ab=0, b=1" name="h.ab"/>
+    <import class="eu.hydrologis.jgrass.models.h.h2ca.h_h2ca"
+        exchangeitems="flow=0, net=1, attribute=2,h2ca=0" name="h.h2ca"/>
+    <import class="eu.hydrologis.jgrass.models.h.magnitudo.h_magnitudo"
+        exchangeitems="flow=0,magnitudo=0" name="h.magnitudo"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.wateroutlet.h_wateroutlet"
+        exchangeitems="map=0, flow=1,basin=0, trim=1" name="h.wateroutlet"/>
+    <import class="eu.hydrologis.jgrass.models.h.tau.h_tau"
+        exchangeitems="slope=0, ab=1,tau=0" name="h.tau"/>
+    <import class="eu.hydrologis.jgrass.models.h.topindex.h_topindex"
+        exchangeitems="tca=0, slope=1,topindex=0" name="h.topindex"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.netnumbering.h_netnumbering"
+        exchangeitems="flow=0, net=1, tca=2, pointshape=3,netnumber=0, basin=1, colornumbers=2, colorbasins=3" name="h.netnumbering"/>
+    <import class="eu.hydrologis.jgrass.models.h.multitca.h_multitca"
+        exchangeitems="flow=0, pit=1, casi3=2,multitca=0" name="h.multitca"/>
+    <import class="eu.hydrologis.jgrass.models.h.strahler.h_strahler"
+        exchangeitems="flow=0, net=1,strahler=0" name="h.strahler"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.splitsubbasin.h_splitsubbasin"
+        exchangeitems="flow=0, hacks=1, tca=2,netnumber=0, subbasin=1, colornumbers=2, colorbasins=3" name="h.splitsubbasin"/>
+    <import class="eu.hydrologis.jgrass.models.h.dd.h_dd"
+        exchangeitems="flow=0, tca=1, net=2,dd=0" name="h.dd"/>
+    <import class="eu.hydrologis.jgrass.models.h.h2cd3d.h_h2cd3d"
+        exchangeitems="flow=0, pit=1, net=2,h2cd3d=0" name="h.h2cd3d"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.sumdownstream.h_sumdownstream"
+        exchangeitems="flow=0, maptosum=1,summ=0" name="h.sumdownstream"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.trasmissivity.h_trasmissivity"
+        exchangeitems="slopemap=0, hsmap=1, conducibilitymap=2,trasmissivitymap=0" name="h.trasmissivity"/>
+    <import class="eu.hydrologis.jgrass.models.h.shalstab.h_shalstab"
+        exchangeitems="slopemap=0, hsmap=1, abmap=2, trasmissivitymap=3, tgphimap=4, cohesionmap=5, rhomap=6, qmap=7,qcritmap=0, classimap=1, catsclass=2, catsqcrit=3" name="h.shalstab"/>
+    <import class="eu.hydrologis.jgrass.models.h.cb.h_cb"
+        exchangeitems="map1=0, map2=1,out1=0, out2=1" name="h.cb"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.netshape2flow.h_netshape2flow"
+        exchangeitems="netshape=0,flownet=0, channelnet=1" name="h.netshape2flow"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.pfafstetter.h_pfafstetter"
+        exchangeitems="flow=0, hacks=1, pit=2, netnumber=3, channel=4, netshape=5,netshapeout=0" name="h.pfafstetter"/>
+    <import class="eu.hydrologis.jgrass.models.h.netdif.h_netdif"
+        exchangeitems="flow=0, stream=1, mapdiff=2,diff=0" name="h.netdif"/>
+    <import class="eu.hydrologis.jgrass.models.h.diameters.h_diameters"
+        exchangeitems="flow=0,diameters=0" name="h.diameters"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.disteuclidea.h_disteuclidea"
+        exchangeitems="flow=0,dist=0" name="h.disteuclidea"/>
+    <import class="eu.hydrologis.jgrass.models.h.meandrop.h_meandrop"
+        exchangeitems="flow=0, tca=1, summ=2,meandrop=0" name="h.meandrop"/>
+    <import class="eu.hydrologis.jgrass.models.h.seol.h_seol"
+        exchangeitems="quantity=0, net=1, flow=2,seol=0, seolshape=1" name="h.seol"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.basinshape.h_basinshape"
+        exchangeitems="pit=0, basins=1,basinshape=0" name="h.basinShape"/>
+    <import
+        class="eu.hydrologis.jgrass.models.rv.rc2shpattr.rv_rc2shpattr"
+        exchangeitems="raster=0, inshp=1,outshp=0" name="rv.rc2shpattr"/>
+    <import class="eu.hydrologis.jgrass.models.g.fork.g_fork"
+        exchangeitems="in=0,out=0" name="g.fork"/>
+    <import class="eu.hydrologis.jgrass.models.g.filter.g_filter"
+        exchangeitems="in=0,out=0" name="g.filter"/>
+    <import class="eu.hydrologis.jgrass.models.v.read.v_read"
+        exchangeitems="in=0,out=0" name="v.read"/>
+    <import class="eu.hydrologis.jgrass.models.h.adige.h_adige"
+        exchangeitems="hillslope=0, netpfaf=1, rain=2, boundaryin=3, hdata=4, hfeatures=5, ddata=6,  dfeatures=7, tdata=8, tfeatures=9, odata=10, ofeatures=11, vegetation=12,discharge=0, boundaryout=1, s1=2, s2=3, s3=4, brain=5" name="h.adige"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.orderbasins.h_orderbasins"
+        exchangeitems="hills=0, netpfaf=1,out=0" name="h.orderbasins"/>
+    <import class="eu.hydrologis.jgrass.models.h.profile.h_profile"
+        exchangeitems="map=0,line=1,out=0" name="h.profile"/>
+    <import class="eu.hydrologis.jgrass.models.h.peakflow.h_peakflow"
+        exchangeitems="sup=0,sub=1,discharge=0" name="h.peakflow"/>
+    <import class="eu.hydrologis.jgrass.models.v.to.rast.v_to_rast"
+        exchangeitems="in=0,out=0" name="v.to.rast"/>
+    <import class="eu.hydrologis.jgrass.models.r.to.vect.r_to_vect"
+        exchangeitems="in=0,out=0" name="r.to.vect"/>
+    <import class="eu.hydrologis.jgrass.models.r.summary.r_summary"
+        exchangeitems="in=0,out=0" name="r.summary"/>
+    <import class="eu.hydrologis.jgrass.models.r.mosaic.r_mosaic"
+        exchangeitems="in=0,out=0" name="r.mosaic"/>
+    <import
+        class="eu.hydrologis.jgrass.models.r.zonalstats.r_zonalstats"
+        exchangeitems="coverage=0, feature=1,out=0" name="r.zonalstats"/>
+    <import class="eu.hydrologis.jgrass.models.r.cutout.r_cutout"
+        exchangeitems="mask=0,tocut=1,cut=0" name="r.cutout"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.hypsographic.h_hypsographic"
+        exchangeitems="elevation=0,hypsographic=0" name="h.hypsographic"/>
+    <import
+        class="eu.hydrologis.jgrass.models.v.addattributes.v_addattributes"
+        exchangeitems="infeatures=0, attributes=1,outfeatures=0" name="v.addattributes"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputScalarWriter" name="oscalar"/>
+    <import
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputStringWriter" name="ostring"/>
+    <import
+        class="eu.hydrologis.jgrass.models.h.skyview.h_skyviewfactor"
+        exchangeitems="elevation=0,sky=0" name="h.skyview"/>
+</document>

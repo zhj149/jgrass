@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="v.out.ogr" name="v.out.ogr">
+	<field desc="input vector map to export" name="input:" order="0" repr=" input=#" required="true" type="string" />
+	<field desc="feature type" name="type" order="1" repr=" type=#"
+		required="true" type="combo"
+		default="line,point,kernel,centroid,boundary,area,face" />
+	<field desc="output datasource (folder) name (dsn)" name="dsn" order="2" repr=" dsn=#" required="true" type="folder" />		
+	<field desc="format of the resulting file" name="format" order="3"
+		repr=" format=#" required="true" type="combo" default="ESRI_Shapefile,MapInfo_File,TIGER,S57,DGN,Memory,CSV,GML,KML,Interlis_1,Interlis_2,SQLite,ODBC,PostgreSQL,MySQL" />
+	<field desc="output OGR layer name" name="olayer" order="4" repr=" olayer=#" required="false" type="string" />
+	<field default="false" desc="Export features with category (labeled) only. Otherwise all features are exported" name="cats" order="5" repr=" -c" type="check" />
+	<field default="false" desc="Use ESRI-style .prj file format (applies to Shapefile output only)" name="prj" order="6" repr=" -e" type="check" />
+	<field default="false" desc="Export lines as polygons" name="lines" order="7" repr=" -p" type="check" />
+</command>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.eicalculator" desc="Energy Index Calculator">
+	<field type="string" required="true" name="numes" desc="Number of elevation bands" order="0" repr=" --numes #" />
+	<field type="string" required="true" name="numei" desc="Number of energetic bands" order="1" repr=" --numei #" />
+	<field type="string" required="true" name="dtdata" desc="Timestep for the data [day]" order="2" repr=" --dtdata #" />
+	<field type="string" required="true" name="latitude" desc="Average latitude in degrees" order="3" repr=" --latitude #" />
+	<field type="rastermap" required="true" name="idbasin" desc="Map of basin ids" order="4" repr=" --igrass-idbasin #" />
+	<field type="rastermap" required="true" name="elev" desc="Map of depitted elevation" order="5" repr=" --igrass-elev #" />
+	<field type="rastermap" required="true" name="curvature" desc="Map of curvatures" order="6" repr=" --igrass-curvature #" />
+	<field type="rastermap" required="true" name="aspect" desc="Map of aspect [rad]" order="7" repr=" --igrass-aspect #" />
+	<field type="rastermap" required="true" name="slopes" desc="Map of slope [rad]" order="8" repr=" --igrass-slopes #" />
+	<field type="file" required="true" name="altimetry" desc="Output altimetric bands" order="9" repr=" --oscalar-altimetry #" />
+	<field type="file" required="true" name="energy" desc="Output energetic bands" order="10" repr=" --oscalar-energy #" />
+	<field type="file" required="true" name="area" desc="Output altimetric/energetic bands areas" order="11" repr=" --oscalar-area #" />
+</command>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.buffer" name="r.buffer">
+	<field desc="name of input raster map" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="distance zone(s)" name="distances" order="1" repr=" distances=#" required="true" type="string" />
+	<field desc="units of distance" name="units" order="2" repr=" units=#" required="true" type="combo" default="meters,kilometers,feet,miles,nautmiles" />
+	<field desc="ignore zero data cell instead of NULL" name="zero" order="3" repr=" -z" required="false" type="check" />
+	<field desc="allow output maps to override existing maps" name="over" order="4" repr=" --o" required="false" type="check" />
+	<field desc="output raster map" name="output" order="5" repr=" output=#" required="true" type="string" />
+</command>

@@ -1,0 +1,15 @@
+<renderer>
+	<field fieldClass="CommandField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.CommandFieldRenderer" />
+	<field fieldClass="DoubleField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.DoubleFieldRenderer" />
+	<field fieldClass="ExclusiveOptionField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.ExclusiveOptionFieldRenderer" />
+	<field fieldClass="FileChooserField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.FileChooserFieldRenderer" />
+	<field fieldClass="FileOpenChooserField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.FileOpenChooserFieldRenderer" />
+	<field fieldClass="FolderChooserField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.FolderChooserFieldRenderer" />
+	<field fieldClass="IntegerField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.IntegerFieldRenderer" />
+	<field fieldClass="MultiOptionField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.GenericOptionFieldRenderer" />
+	<field fieldClass="OptionField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.OptionFieldRenderer" />
+	<field fieldClass="StringField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.StringFieldRenderer" />
+	<field fieldClass="OnOffOptionField" rendererClass="eu.hydrologis.jgrass.uibuilder.swt.renderers.CheckBoxFieldRenderer" />
+	<field fieldClass="JGrassRasterMapField" rendererClass="eu.hydrologis.jgrass.uibuilder.jgrassdependent.renderers.JGrassRasterMapChooserRenderer" />
+	<field fieldClass="ComboField" rendererClass="eu.hydrologis.jgrass.uibuilder.jgrassdependent.renderers.ComboRenderer" />
+</renderer>

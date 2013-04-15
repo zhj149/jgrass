@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.proj" name="r.proj">
+	<field desc="Name of input raster map to re-project" name="input" order="0" repr=" input=#" required="true" type="string" />
+	<field desc="Location of input raster map" name="location" order="1" repr=" location=#" required="true" type="string" />
+	<field desc="Mapset of input raster map" name="mapset" order="2" repr=" mapset=#" required="true" type="string" />
+	<field desc="Path to GRASS database of input location" name="db" order="3" repr=" dbase=#" required="false" type="folder" />
+	<field desc="Name for output raster map" name="output" order="4" repr=" output=#" required="true" type="string" />
+	<field desc="Interpolation method to use" name="method" order="5" repr=" method=#" required="false" type="combo" default="nearest,bilinear,cubic" />
+	<field desc="Resolution of output map" name="resolution" order="6" repr=" resolution=#" required="false" type="string" />
+	<field desc="Do not perform region cropping optimization" name="crop" order="7" repr=" -n" required="false" type="check" />
+	<field desc="Allow output maps to override existing maps" name="over" order="8" repr=" --o" required="false" type="check" />
+</command>

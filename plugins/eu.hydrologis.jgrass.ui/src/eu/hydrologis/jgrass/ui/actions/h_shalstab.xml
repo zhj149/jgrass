@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.shalstab" desc="Shalstab">
+	<field type="rastermap" required="true" name="slope" desc="input slope map" order="0" repr=" --igrass-slopemap #" />
+	<field type="rastermap" required="true" name="ab" desc="input ab map" order="1" repr=" --igrass-abmap #" />
+	<field type="string" required="true" name="density" desc="constant value of density ratio [soil/water]" order="2" repr=" --rhoconst #" />
+	<field type="string" required="true" name="phi" desc="constant value of tangent of internal friction angle [tangent]" order="3" repr=" --tgphiconst #" />
+	<field type="string" required="true" name="t" desc="constant value of transmittivity [mm2/day]" order="4" repr=" --trasmissivityconst #" />
+	<field type="string" required="true" name="q" desc="constant value of effective rain [mm/day]" order="5" repr=" --qconst #" />
+	<field type="string" required="true" name="c" desc="constant value of cohesion [Pa]" order="6" repr=" --cohesionconst #" />
+	<field type="string" required="true" name="hs" desc="constant value of soil depth [m]" order="7" repr=" --hsconst #" />
+	<field type="string" required="true" name="qcritmap" desc="output critical rain map [mm/day]" order="8" repr=" --ograss-qcritmap # --ocats-catsqcrit #" />
+	<field type="string" required="true" name="classimap" desc="output basin classification map" order="9" repr=" --ograss-classimap # --ocats-catsclass #" />
+</command>

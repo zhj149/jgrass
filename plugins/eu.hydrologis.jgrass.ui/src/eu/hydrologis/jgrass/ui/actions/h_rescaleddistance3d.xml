@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="Rescaleddistance" name="h.rescaleddistance3d">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="net" name="net" order="0" repr=" --igrass-net #" required="true" type="rastermap"/>
+    <field desc="in" name="input" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="ratio" name="ratio" order="2" repr=" --number #" required="true" type="double"/>
+    <field desc="out" name="output" order="3" repr=" --ograss-rdist3d #" required="true" type="string"/>
+    <i18n key="pit" en="input depitted map" it="mappa delle elevazioni depittata in ingresso"/>
+    <i18n key="net" en="input stream network map" it="mappa del reticolo idrografico in ingresso"/>
+    <i18n key="in" en="input flow directions map" it="mappa delle direzioni di drenaggio in ingresso"/>
+    <i18n key="ratio" en="channel/overland ratio" it="rapporto tra velocità nei canali e nei versanti"/>
+    <i18n key="out" en="rescaled distance output map" it="mappa delle distanze riscalate in uscita"/>
+</command>

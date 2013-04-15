@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Grass Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.grass;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.grass.GrassPlugin
+Bundle-Vendor: HydroloGIS s.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ eu.hydrologis.jgrass.libs;bundle-version="1.0.0",
+ net.refractions.udig.ui,
+ eu.hydrologis.jgrass.ui.console,
+ net.refractions.udig.catalog,
+ eu.hydrologis.jgrass.console.editor,
+ eu.udig.catalog.jgrass;bundle-version="1.0.0"
+Eclipse-LazyStart: true
+Export-Package: eu.hydrologis.jgrass.grass

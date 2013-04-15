@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.gradient " name="h.gradient">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="gradient" name="gradient" order="1" repr=" --ograss-gradient #" required="true" type="string"/>
+    <i18n key="pit" en="input elevation map" it="raster delle elevazione in ingresso"/>
+    <i18n key="gradient" en="gradient output map" it="mappa del gradiente in uscita"/>
+</command>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Netcdf Export
+Bundle-SymbolicName: eu.hydrologis.jgrass.netcdf.export;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: eu.hydrologis.jgrass.netcdf.export.NetcdfExportPlugin
+Bundle-Vendor: HydroloGIS s.r.l.
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.hydrologis.jgrass.libs;bundle-version="1.0.0",
+ net.refractions.udig.libs;bundle-version="1.2.0",
+ eu.udig.catalog.jgrass;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.ui.utilities;bundle-version="1.0.0",
+ net.refractions.udig.ui;bundle-version="1.2.0"
+Bundle-ActivationPolicy: lazy

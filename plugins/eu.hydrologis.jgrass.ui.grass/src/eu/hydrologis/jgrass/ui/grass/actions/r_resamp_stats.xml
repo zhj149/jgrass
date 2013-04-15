@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.resamp.stats" name="r.resamp.stats">
+	<field desc="Name of input raster map" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="Aggregation method" name="method" order="1" repr=" method=#" required="true" type="combo" default="average,median,mode,minimum,maximum,quart1,quart3,perc90,sum,variance,stddev" />
+	<field desc="allow output maps to override existing maps" name="over" order="3" repr=" --o" required="false" type="check" />
+	<field desc="Propagate NULLs" name="null" order="4" repr=" -n" required="false" type="check" />
+	<field desc="Weight according to area (slower)" name="area" order="5" repr=" -w" required="false" type="check" />
+	<field desc="Name for output raster map" name="output" order="6" repr=" output=#" required="true" type="string" />
+</command>

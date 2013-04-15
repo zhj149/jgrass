@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="v.surf.rst" name="v.surf.rst">
+	<field desc="Name of GRASS input vector map" name="input" order="0" repr=" input=#" required="true" type="string" />		
+	<field desc="Name of the attribute column with values to be used" name="attr" order="1" repr=" zcolumn=#" required="false" type="string" />
+	<check name="Define the minimum distance between points" required="false" order="2" repr=" " >
+		<field type="string" required="false" name="distance" desc="minimum distance between points" order="0" repr=" dmin #" />
+	</check>
+	<check name="Maximum distance between points on isoline" required="false" order="3" repr=" " >
+		<field type="string" required="false" name="distance" desc="maximum distance between points" order="0" repr=" dmax #" />
+	</check>
+	<field desc="Output surface raster map (elevation)" name="elev" order="7" repr=" elev=#" required="true" type="string" />
+</command>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="v.in.ogr" name="v.in.ogr">
+	<field desc="input datasource (folder) name (dsn)" name="dsn" order="0" repr=" dsn=#" required="true" type="folder" />		
+	<field desc="OGR layer name" name="layer" order="1" repr=" layer=#" required="true" type="string" />
+	<field desc="feature type" name="type" order="2" repr=" type=#" required="true" type="combo" default="point,line,boundary,centroid" />
+	<field type="string" required="false" desc="Name for new location to create" name="location" order="3" repr=" location" />
+	<field default="false" desc="List supported formats and exit" name="list" order="4" repr=" -l" type="check" />
+	<field default="false" desc="Extend location extents based on new dataset" name="ext" order="5" repr=" -e" type="check" />
+	<field default="false" desc="Allow output files to overwrite existing files" name="over" order="6" repr=" --o" type="check" />
+	<field desc="output imported vector map" name="output" order="7" repr=" output=#" required="true" type="string" />
+</command>

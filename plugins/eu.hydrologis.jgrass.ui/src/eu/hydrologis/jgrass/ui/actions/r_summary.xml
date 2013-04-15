@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.summary" name="r.summary">
+    <field desc="in" name="input" order="0" repr=" --igrass-in #  --oscalar-out 'CONSOLE'" required="true" type="rastermap"/>
+    <i18n key="in" en="raster map" it="mappa raster"/>
+</command>

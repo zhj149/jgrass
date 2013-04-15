@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.h2cd" desc="Hillslope2channel distance">
+	<field type="rastermap" required="true" name="net" desc="input stream network map" order="0" repr=" --igrass-net #" />
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="1" repr=" --igrass-flow #" />
+	<exclusiveOption name="mode" required="true" order="2">
+		<option name="topological distance (pixels)" order="1" repr=" --mode 0">
+		</option>
+		<option name="simple distance (meters)" order="2" repr=" --mode 1">
+		</option>
+	</exclusiveOption>
+	<field type="string" required="true" name="h2cd" desc="h2cd" order="3" repr=" --ograss-h2cd #" />
+	<i18n key="h2cd" en="output map with distance from river network" it="mappa delle distanze dalla rete in uscita"/>
+</command>

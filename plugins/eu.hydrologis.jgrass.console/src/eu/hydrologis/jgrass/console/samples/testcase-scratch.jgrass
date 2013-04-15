@@ -1,0 +1,19 @@
+/* h.flow --igrass-pit pit --ograss-flow f6 */
+
+String pit = "pit";
+String flow = "f67";
+
+Object object;
+jgrass {
+
+	$object = h.flow --igrass-pit $pit --ograss*-flow * /*$flow*/
+/*		--grassdb "/home/moovida/grass/grassdb/"
+		--location "flanginec"
+		--mapset "prova"
+		*/
+}
+
+
+for(int i = 0; i < 15; i++){
+	System.out.println("test");
+}

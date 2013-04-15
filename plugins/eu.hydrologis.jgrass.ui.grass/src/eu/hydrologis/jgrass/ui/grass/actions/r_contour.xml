@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.contour" name="r.contour">
+	<field desc="name of input raster map" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="list of contour levels (sep ,)" name="levels" order="1" repr=" levels=#" required="false" type="string" />
+	<field desc="minimum contour level" name="minlevel" order="2" repr=" minlevel=#" required="false" type="string"/>
+	<field desc="maximum contour level" name="maxlevel" order="3" repr=" maxlevel=#" required="false" type="string"/>	
+	<field desc="increment between contour levels" name="step" order="4" repr=" step=#" required="false" type="double"/>	
+	<field desc="Suppress single crossing error messages" name="error" order="5" repr=" -n" required="false" type="check" />
+	<field desc="allow output maps to override existing maps" name="over" order="6" repr=" --o" required="false" type="check" />
+	<field desc="output GRASS vector map" name="output" order="7" repr=" output=#" required="true" type="string" />
+</command>

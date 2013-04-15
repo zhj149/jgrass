@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+	<extension-point id="eu.hydrologis.jgrass.models.openmimodel"		name="openmimodel" schema="schema/openmimodel.exsd" />
+	<extension-point id="eu.hydrologis.jgrass.models.nativemodel"		name="nativemodel" schema="schema/nativemodel.exsd" />
+	<extension point="eu.hydrologis.jgrass.models.openmimodel">
+			<model class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			id="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap" name="igrassold">
+		</model>
+		<model class="eu.hydrologis.jgrass.utilitylinkables.InputGrassCoverageReader"
+			id="eu.hydrologis.jgrass.utilitylinkables.InputGrassCoverageReader" name="igrass">
+		</model>
+		<model class="eu.hydrologis.jgrass.utilitylinkables.InputTiffCoverageReader"
+			id="eu.hydrologis.jgrass.utilitylinkables.InputTiffCoverageReader" name="itiff">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			name="igrassascii" />
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			name="iesrigrid">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputGrassRasterMap"
+			name="ifluidturtle">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputShapeReader"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputShapeReader" name="ishapefile">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			name="ograssold">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputGrassCoverageWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassCoverageWriter"
+			name="ograss">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			name="ograssascii">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			name="oesrigrid">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputTableFileWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputTableFileWriter"
+			name="otable">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputGrassRasterMap"
+			name="ofluidturtle">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputShapeWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputShapeWriter" name="oshapefile">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.ColorTableMapWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.ColorTableMapWriter"
+			name="ocolor">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.CategoriesMapWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.CategoriesMapWriter"
+			name="ocats">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputScalarReader"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputScalarReader" name="iscalar">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputScalarTimeReader"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputScalarTimeReader" name="itscalar">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputChartWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputChartWriter" name="ochart">
+		</model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.InputFeatureLayerReader"
+			class="eu.hydrologis.jgrass.utilitylinkables.InputFeatureLayerReader"
+			name="iflayer">
+		</model>
+		<model id="eu.hydrologis.jgrass.models.h.flow.h_flow" class="eu.hydrologis.jgrass.models.h.flow.h_flow"
+			inputitems="pit=0" outputitems="flow=0" name="h.flow" />
+		<model id="eu.hydrologis.jgrass.models.h.tca.h_tca" class="eu.hydrologis.jgrass.models.h.tca.h_tca"
+			inputitems="flow=0" outputitems="tca=0" name="h.tca" />
+		<model id="eu.hydrologis.jgrass.models.h.tca3d.h_tca3d" class="eu.hydrologis.jgrass.models.h.tca3d.h_tca3d"
+			inputitems="pit=0, flow=1" outputitems="tca3d=0" name="h.tca3d" />
+		<model id="eu.hydrologis.jgrass.models.h.markoutlets.h_markoutlets"
+			class="eu.hydrologis.jgrass.models.h.markoutlets.h_markoutlets"
+			inputitems="flow=0" outputitems="mflow=0" name="h.markoutlets" />
+		<model id="eu.hydrologis.jgrass.models.h.draindir.h_draindir"
+			class="eu.hydrologis.jgrass.models.h.draindir.h_draindir" inputitems="pit=0, flow=1, flowfixed=2"
+			outputitems="dir=0, tca=1" name="h.draindir" />
+		<model id="eu.hydrologis.jgrass.models.h.pitfiller.h_pitfiller"
+			class="eu.hydrologis.jgrass.models.h.pitfiller.h_pitfiller"
+			inputitems="elevation=0" outputitems="pit=0" name="h.pitfiller" />
+		<model id="eu.hydrologis.jgrass.models.h.gradient.h_gradient"
+			class="eu.hydrologis.jgrass.models.h.gradient.h_gradient" inputitems="pit=0"
+			outputitems="gradient=0" name="h.gradient" />
+		<model id="eu.hydrologis.jgrass.models.h.aspect.h_aspect" class="eu.hydrologis.jgrass.models.h.aspect.h_aspect"
+			inputitems="pit=0" outputitems="aspect=0, color=1" name="h.aspect" />
+		<model id="eu.hydrologis.jgrass.models.h.extractnetwork.h_extractnetwork"
+			class="eu.hydrologis.jgrass.models.h.extractnetwork.h_extractnetwork"
+			inputitems="flow=0, tca=1, slope=2, class=3" outputitems="net=0, netshape=1"
+			name="h.extractnetwork" />
+		<model id="eu.hydrologis.jgrass.models.h.hacklength.h_hacklength"
+			class="eu.hydrologis.jgrass.models.h.hacklength.h_hacklength"
+			inputitems="flow=0, tca=1" outputitems="hackl=0" name="h.hacklength" />
+		<model id="eu.hydrologis.jgrass.models.h.hacklength3d.h_hacklength3d"
+			class="eu.hydrologis.jgrass.models.h.hacklength3d.h_hacklength3d"
+			inputitems="flow=0, tca=1, pit=2" outputitems="hackl3d=0" name="h.hacklength3d" />
+		<model id="eu.hydrologis.jgrass.models.h.hackstream.h_hackstream"
+			class="eu.hydrologis.jgrass.models.h.hackstream.h_hackstream"
+			inputitems="flow=0, tca=1, hackl=2, net=3, num=4" outputitems="hacks=0"
+			name="h.hackstream" />
+		<model id="eu.hydrologis.jgrass.models.h.slope.h_slope" class="eu.hydrologis.jgrass.models.h.slope.h_slope"
+			inputitems="pit=0, flow=1" outputitems="slope=0" name="h.slope" />
+		<model id="eu.hydrologis.jgrass.models.h.nabla.h_nabla" class="eu.hydrologis.jgrass.models.h.nabla.h_nabla"
+			inputitems="pit=0" outputitems="nabla=0" name="h.nabla" />
+		<model id="eu.hydrologis.jgrass.models.h.curvatures.h_curvatures"
+			class="eu.hydrologis.jgrass.models.h.curvatures.h_curvatures"
+			inputitems="pit=0" outputitems="prof=0, plan=1, tang=2" name="h.curvatures" />
+		<model id="eu.hydrologis.jgrass.models.h.d2o.h_d2o" class="eu.hydrologis.jgrass.models.h.d2o.h_d2o"
+			inputitems="flow=0" outputitems="d2o=0" name="h.d2o" />
+		<model id="eu.hydrologis.jgrass.models.h.d2o3d.h_d2o3d" class="eu.hydrologis.jgrass.models.h.d2o3d.h_d2o3d"
+			inputitems="pit=0, flow=1" outputitems="d2o3d=0" name="h.d2o3d" />
+		<model id="eu.hydrologis.jgrass.models.h.gc.h_gc" class="eu.hydrologis.jgrass.models.h.gc.h_gc"
+			inputitems="slope=0, net=1, cp9=2" outputitems="class=0, aggclass=1"
+			name="h.gc" />
+		<model id="eu.hydrologis.jgrass.models.h.tc.h_tc" class="eu.hydrologis.jgrass.models.h.tc.h_tc"
+			inputitems="prof=0, tang=1" outputitems="cp3=0, cp9=1" name="h.tc" />
+		<model id="eu.hydrologis.jgrass.models.h.h2cd.h_h2cd" class="eu.hydrologis.jgrass.models.h.h2cd.h_h2cd"
+			inputitems="net=0, flow=1" outputitems="h2cd=0" name="h.h2cd" />
+		<model
+			id="eu.hydrologis.jgrass.models.h.rescaleddistance.h_rescaleddistance"
+			class="eu.hydrologis.jgrass.models.h.rescaleddistance.h_rescaleddistance"
+			inputitems="net=0, flow=1" outputitems="rdist=0" name="h.rescaleddistance" />
+		<model
+			id="eu.hydrologis.jgrass.models.h.rescaleddistance3d.h_rescaleddistance3d"
+			class="eu.hydrologis.jgrass.models.h.rescaleddistance3d.h_rescaleddistance3d"
+			inputitems="net=0, flow=1, pit=2" outputitems="rdist3d=0" name="h.rescaleddistance3d" />
+		<model id="eu.hydrologis.jgrass.models.h.ab.h_ab" class="eu.hydrologis.jgrass.models.h.ab.h_ab"
+			inputitems="plan=0, tca=1" outputitems="ab=0, b=1" name="h.ab" />
+		<model id="eu.hydrologis.jgrass.models.h.h2ca.h_h2ca" class="eu.hydrologis.jgrass.models.h.h2ca.h_h2ca"
+			inputitems="flow=0, net=1, attribute=2" outputitems="h2ca=0" name="h.h2ca" />
+		<model id="eu.hydrologis.jgrass.models.h.magnitudo.h_magnitudo"
+			class="eu.hydrologis.jgrass.models.h.magnitudo.h_magnitudo"
+			inputitems="flow=0" outputitems="magnitudo=0" name="h.magnitudo" />
+		<model id="eu.hydrologis.jgrass.models.h.wateroutlet.h_wateroutlet"
+			class="eu.hydrologis.jgrass.models.h.wateroutlet.h_wateroutlet"
+			inputitems="map=0, flow=1" outputitems="basin=0, trim=1" name="h.wateroutlet" />
+		<model id="eu.hydrologis.jgrass.models.h.tau.h_tau" class="eu.hydrologis.jgrass.models.h.tau.h_tau"
+			inputitems="slope=0, ab=1" outputitems="tau=0" name="h.tau" />
+		<model id="eu.hydrologis.jgrass.models.h.topindex.h_topindex"
+			class="eu.hydrologis.jgrass.models.h.topindex.h_topindex" inputitems="tca=0, slope=1"
+			outputitems="topindex=0" name="h.topindex" />
+		<model id="eu.hydrologis.jgrass.models.h.netnumbering.h_netnumbering"
+			class="eu.hydrologis.jgrass.models.h.netnumbering.h_netnumbering"
+			inputitems="flow=0, net=1, tca=2, pointshape=3" outputitems="netnumber=0, basin=1, colornumbers=2, colorbasins=3"
+			name="h.netnumbering" />
+		<model id="eu.hydrologis.jgrass.models.h.multitca.h_multitca"
+			class="eu.hydrologis.jgrass.models.h.multitca.h_multitca" inputitems="flow=0, pit=1, casi3=2"
+			outputitems="multitca=0" name="h.multitca" />
+		<model id="eu.hydrologis.jgrass.models.h.strahler.h_strahler"
+			class="eu.hydrologis.jgrass.models.h.strahler.h_strahler" inputitems="flow=0, net=1"
+			outputitems="strahler=0" name="h.strahler" />
+		<model id="eu.hydrologis.jgrass.models.h.splitsubbasin.h_splitsubbasin"
+			class="eu.hydrologis.jgrass.models.h.splitsubbasin.h_splitsubbasin"
+			inputitems="flow=0, hacks=1, tca=2" outputitems="netnumber=0, subbasin=1, colornumbers=2, colorbasins=3"
+			name="h.splitsubbasin" />
+		<model id="eu.hydrologis.jgrass.models.h.dd.h_dd" class="eu.hydrologis.jgrass.models.h.dd.h_dd"
+			inputitems="flow=0, tca=1, net=2" outputitems="dd=0" name="h.dd" />
+		<model id="eu.hydrologis.jgrass.models.h.h2cd3d.h_h2cd3d" class="eu.hydrologis.jgrass.models.h.h2cd3d.h_h2cd3d"
+			inputitems="flow=0, pit=1, net=2" outputitems="h2cd3d=0" name="h.h2cd3d" />
+		<model id="eu.hydrologis.jgrass.models.h.sumdownstream.h_sumdownstream"
+			class="eu.hydrologis.jgrass.models.h.sumdownstream.h_sumdownstream"
+			inputitems="flow=0, maptosum=1" outputitems="summ=0" name="h.sumdownstream" />
+		<model id="eu.hydrologis.jgrass.models.h.trasmissivity.h_trasmissivity"
+			class="eu.hydrologis.jgrass.models.h.trasmissivity.h_trasmissivity"
+			inputitems="slopemap=0, hsmap=1, conducibilitymap=2" outputitems="trasmissivitymap=0"
+			name="h.trasmissivity" />
+		<model id="eu.hydrologis.jgrass.models.h.shalstab.h_shalstab"
+			class="eu.hydrologis.jgrass.models.h.shalstab.h_shalstab"
+			inputitems="slopemap=0, hsmap=1, abmap=2, trasmissivitymap=3, tgphimap=4, cohesionmap=5, rhomap=6, qmap=7"
+			outputitems="qcritmap=0, classimap=1, catsclass=2, catsqcrit=3" name="h.shalstab" />
+		<model id="eu.hydrologis.jgrass.models.h.cb.h_cb" class="eu.hydrologis.jgrass.models.h.cb.h_cb"
+			inputitems="map1=0, map2=1" outputitems="out1=0, out2=1" name="h.cb" />
+		<model id="eu.hydrologis.jgrass.models.h.netshape2flow.h_netshape2flow"
+			class="eu.hydrologis.jgrass.models.h.netshape2flow.h_netshape2flow"
+			inputitems="netshape=0" outputitems="flownet=0, channelnet=1" name="h.netshape2flow" />
+		<model id="eu.hydrologis.jgrass.models.h.pfafstetter.h_pfafstetter"
+			class="eu.hydrologis.jgrass.models.h.pfafstetter.h_pfafstetter"
+			inputitems="flow=0, hacks=1, pit=2, netnumber=3, channel=4, netshape=5"
+			outputitems="netshapeout=0" name="h.pfafstetter" />
+		<model id="eu.hydrologis.jgrass.models.h.netdif.h_netdif" class="eu.hydrologis.jgrass.models.h.netdif.h_netdif"
+			inputitems="flow=0, stream=1, mapdiff=2" outputitems="diff=0" name="h.netdif" />
+		<model id="eu.hydrologis.jgrass.models.h.diameters.h_diameters"
+			class="eu.hydrologis.jgrass.models.h.diameters.h_diameters"
+			inputitems="flow=0" outputitems="diameters=0" name="h.diameters" />
+		<model id="eu.hydrologis.jgrass.models.h.disteuclidea.h_disteuclidea"
+			class="eu.hydrologis.jgrass.models.h.disteuclidea.h_disteuclidea"
+			inputitems="flow=0" outputitems="dist=0" name="h.disteuclidea" />
+		<model id="eu.hydrologis.jgrass.models.h.meandrop.h_meandrop"
+			class="eu.hydrologis.jgrass.models.h.meandrop.h_meandrop" inputitems="flow=0, tca=1, summ=2"
+			outputitems="meandrop=0" name="h.meandrop" />
+		<model id="eu.hydrologis.jgrass.models.h.seol.h_seol" class="eu.hydrologis.jgrass.models.h.seol.h_seol"
+			inputitems="quantity=0, net=1, flow=2" outputitems="seol=0, seolshape=1"
+			name="h.seol" />
+		<model id="eu.hydrologis.jgrass.models.h.basinShape.h_basinShape"
+			class="eu.hydrologis.jgrass.models.h.basinshape.h_basinshape"
+			inputitems="pit=0, basins=1" outputitems="basinshape=0" name="h.basinShape" />
+		<model id="eu.hydrologis.jgrass.models.rv.rc2shpattr.rv_rc2shpattr"
+			class="eu.hydrologis.jgrass.models.rv.rc2shpattr.rv_rc2shpattr"
+			inputitems="raster=0, inshp=1" outputitems="outshp=0" name="rv.rc2shpattr" />
+		<model id="eu.hydrologis.jgrass.models.g.fork.g_fork" class="eu.hydrologis.jgrass.models.g.fork.g_fork"
+			inputitems="in=0" outputitems="out=0" name="g.fork" />
+		<model id="eu.hydrologis.jgrass.models.g.filter.g_filter" class="eu.hydrologis.jgrass.models.g.filter.g_filter"
+			inputitems="in=0" outputitems="out=0" name="g.filter" />
+		<model id="eu.hydrologis.jgrass.models.v.read.v_read" class="eu.hydrologis.jgrass.models.v.read.v_read"
+			inputitems="in=0" outputitems="out=0" name="v.read" />
+		<model id="eu.hydrologis.jgrass.models.h.adige.h_adige" class="eu.hydrologis.jgrass.models.h.adige.h_adige"
+			inputitems="hillslope=0, netpfaf=1, rain=2, boundaryin=3, hdata=4, hfeatures=5, ddata=6,  dfeatures=7, tdata=8, tfeatures=9, odata=10, ofeatures=11, vegetation=12" outputitems="discharge=0, boundaryout=1, s1=2, s2=3, s3=4, brain=5"
+			name="h.adige" />
+		<model id="eu.hydrologis.jgrass.models.h.orderbasins.h_orderbasins"
+			class="eu.hydrologis.jgrass.models.h.orderbasins.h_orderbasins"
+			inputitems="hills=0, netpfaf=1" outputitems="out=0" name="h.orderbasins" />
+		<model id="eu.hydrologis.jgrass.models.h.profile.h_profile"
+			class="eu.hydrologis.jgrass.models.h.profile.h_profile" inputitems="map=0,line=1"
+			outputitems="out=0" name="h.profile" />
+  <model
+        class="eu.hydrologis.jgrass.models.h.peakflow.h_peakflow"
+        id="eu.hydrologis.jgrass.models.h.peakflow.h_peakflow"
+        inputitems="sup=0,sub=1"
+        name="h.peakflow"
+        outputitems="discharge=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.v.to.rast.v_to_rast"
+        id="eu.hydrologis.jgrass.models.v.to.rast.v_to_rast"
+        inputitems="in=0"
+        name="v.to.rast"
+        outputitems="out=0">
+  </model>
+  <!--<model
+        class="eu.hydrologis.jgrass.models.r.read.r_read"
+        id="eu.hydrologis.jgrass.models.r.read.r_read"
+        inputitems="in=0"
+        name="r.read"
+        outputitems="out=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.d.what.rast.d_what_rast"
+        id="eu.hydrologis.jgrass.models.d.what.rast.d_what_rast"
+        inputitems="in=0"
+        name="d.what.rast"
+        outputitems="out=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.i.overview.i_overview"
+        id="eu.hydrologis.jgrass.models.i.overview.i_overview"
+        name="i.overview">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.i.tiler.i_tiler"
+        id="eu.hydrologis.jgrass.models.i.tiler.i_tiler"
+        name="i.tiler">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.i.imagemosaic.i_imagemosaic"
+        id="eu.hydrologis.jgrass.models.i.imagemosaic.i_imagemosaic"
+        name="i.imagemosaic">
+  </model> -->
+  <model
+        class="eu.hydrologis.jgrass.models.r.to.vect.r_to_vect"
+        id="eu.hydrologis.jgrass.models.r.to.vect"
+        inputitems="in=0"
+        name="r.to.vect"
+        outputitems="out=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.r.summary.r_summary"
+        id="eu.hydrologis.jgrass.models.r.summary"
+        inputitems="in=0"
+        name="r.summary"
+        outputitems="out=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.r.mosaic.r_mosaic"
+        id="eu.hydrologis.jgrass.models.r.mosaic"
+        inputitems="in=0"
+        name="r.mosaic"
+        outputitems="out=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.r.zonalstats.r_zonalstats"
+        id="eu.hydrologis.jgrass.models.r.zonalstats"
+        inputitems="coverage=0, feature=1"
+        name="r.zonalstats"
+        outputitems="out=0">
+  </model>
+  <!--<model
+        class="eu.hydrologis.jgrass.models.r.mapcalc.r_mapcalc"
+        id="eu.hydrologis.jgrass.models.r.mapcalc"
+        name="r.mapcalc">
+  </model> -->
+  <model
+        class="eu.hydrologis.jgrass.models.r.cutout.r_cutout"
+        id="eu.hydrologis.jgrass.models.r.cutout"
+        inputitems="mask=0,tocut=1"
+        name="r.cutout"
+        outputitems="cut=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.h.hypsographic.h_hypsographic"
+        id="eu.hydrologis.jgrass.models.h.hypsographic"
+        inputitems="elevation=0"
+        name="h.hypsographic"
+        outputitems="hypsographic=0">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.v.addattributes.v_addattributes"
+        id="eu.hydrologis.jgrass.models.v.addattributes"
+        inputitems="infeatures=0, attributes=1"
+        name="v.addattributes"
+        outputitems="outfeatures=0">
+  </model>
+		<model id="eu.hydrologis.jgrass.utilitylinkables.OutputScalarWriter"
+			class="eu.hydrologis.jgrass.utilitylinkables.OutputScalarWriter"
+			name="oscalar">
+		</model>
+  <model
+        class="eu.hydrologis.jgrass.utilitylinkables.OutputStringWriter"
+        id="eu.hydrologis.jgrass.models.ostring"
+        name="ostring">
+  </model>
+  <model
+        class="eu.hydrologis.jgrass.models.h.skyview.h_skyviewfactor"
+        id="eu.hydrologis.jgrass.models.h_skyview"
+        inputitems="elevation=0"
+        name="h.skyview"
+        outputitems="sky=0">
+  </model>
+	</extension>
+	<extension point="eu.hydrologis.jgrass.models.nativemodel">
+		<nativemodel commandname="r.in.gdal">
+		</nativemodel>
+		<nativemodel commandname="r.info">
+		</nativemodel>
+		<nativemodel commandname="g.region">
+		</nativemodel>
+		<nativemodel commandname="g.access" />
+		<nativemodel commandname="g.ask" />
+		<nativemodel commandname="g.dirseps" />
+		<nativemodel commandname="g.filename" />
+		<nativemodel commandname="g.findetc" />
+		<nativemodel commandname="g.findfile" />
+		<nativemodel commandname="g.gisenv" />
+		<nativemodel commandname="g.gui" />
+		<nativemodel commandname="g.mapset" />
+		<nativemodel commandname="g.mapsets" />
+		<nativemodel commandname="g.message" />
+		<nativemodel commandname="g.mkfontcap" />
+		<nativemodel commandname="g.parser" />
+		<nativemodel commandname="g.proj" />
+		<nativemodel commandname="g.pnmcomp" />
+		<nativemodel commandname="g.region" />
+		<nativemodel commandname="g.setproj" />
+		<nativemodel commandname="g.tempfile" />
+		<nativemodel commandname="g.transform" />
+		<nativemodel commandname="g.version" />
+		<nativemodel commandname="g.copy" />
+		<nativemodel commandname="g.list" />
+		<nativemodel commandname="g.remove" />
+		<nativemodel commandname="g.rename" />
+		<nativemodel commandname="i.class" />
+		<nativemodel commandname="i.cluster" />
+		<nativemodel commandname="i.gensig" />
+		<nativemodel commandname="i.gensigset" />
+		<nativemodel commandname="i.group" />
+		<nativemodel commandname="i.his.rgb" />
+		<nativemodel commandname="i.maxlik" />
+		<nativemodel commandname="i.ortho.photo" />
+		<nativemodel commandname="i.points" />
+		<nativemodel commandname="i.rectify" />
+		<nativemodel commandname="i.rgb.his" />
+		<nativemodel commandname="i.smap" />
+		<nativemodel commandname="i.target" />
+		<nativemodel commandname="i.vpoints" />
+		<nativemodel commandname="i.pca" />
+		<nativemodel commandname="i.cca" />
+		<nativemodel commandname="i.fft" />
+		<nativemodel commandname="i.ifft" />
+		<nativemodel commandname="i.zc" />
+		<nativemodel commandname="m.cogo" />
+		<nativemodel commandname="ps.map" />
+		<nativemodel commandname="r.average" />
+		<nativemodel commandname="r.basins.fill" />
+		<nativemodel commandname="r.bilinear" />
+		<nativemodel commandname="r.bitpattern" />
+		<nativemodel commandname="r.buffer" />
+		<nativemodel commandname="r.carve" />
+		<nativemodel commandname="r.category" />
+		<nativemodel commandname="r.cats" />
+		<nativemodel commandname="r.circle" />
+		<nativemodel commandname="r.clump" />
+		<nativemodel commandname="r.coin" />
+		<nativemodel commandname="r.colors" />
+		<nativemodel commandname="r.composite" />
+		<nativemodel commandname="r.compress" />
+		<nativemodel commandname="r.contour" />
+		<nativemodel commandname="r.cost" />
+		<nativemodel commandname="r.covar" />
+		<nativemodel commandname="r.cross" />
+		<nativemodel commandname="r.describe" />
+		<nativemodel commandname="r.digit" />
+		<nativemodel commandname="r.distance" />
+		<nativemodel commandname="r.drain" />
+		<nativemodel commandname="r.fill.dir" />
+		<nativemodel commandname="r.flow" />
+		<nativemodel commandname="r.grow" />
+		<nativemodel commandname="r.gwflow" />
+		<nativemodel commandname="r.his" />
+		<nativemodel commandname="r.in.arc" />
+		<nativemodel commandname="r.in.ascii" />
+		<nativemodel commandname="r.in.bin" />
+		<nativemodel commandname="r.info" />
+		<nativemodel commandname="r.in.gridatb" />
+		<nativemodel commandname="r.in.mat" />
+		<nativemodel commandname="r.in.poly" />
+		<nativemodel commandname="r.in.xyz" />
+		<nativemodel commandname="r.kappa" />
+		<nativemodel commandname="r.lake" />
+		<nativemodel commandname="r.le.patch" />
+		<nativemodel commandname="r.le.pixel" />
+		<nativemodel commandname="r.le.setup" />
+		<nativemodel commandname="r.le.trace" />
+		<nativemodel commandname="r.li.edgedensity" />
+		<nativemodel commandname="r.li.patchdensity" />
+		<nativemodel commandname="r.li.patchnum" />
+		<nativemodel commandname="r.li.shape" />
+		<nativemodel commandname="r.li.simpson" />
+		<nativemodel commandname="r.li.shannon" />
+		<nativemodel commandname="r.li.mps" />
+		<nativemodel commandname="r.li.mpa" />
+		<nativemodel commandname="r.li.padcv" />
+		<nativemodel commandname="r.li.padsd" />
+		<nativemodel commandname="r.li.padrange" />
+		<nativemodel commandname="r.li.cwed" />
+		<nativemodel commandname="r.li.richness" />
+		<nativemodel commandname="r.li.dominance" />
+		<nativemodel commandname="r.los" />
+		<nativemodel commandname="r.mapcalc" />
+		<nativemodel commandname="r3.mapcalc" />
+		<nativemodel commandname="r.median" />
+		<nativemodel commandname="r.mfilter" />
+		<nativemodel commandname="r.mfilter.fp" />
+		<nativemodel commandname="r.mode" />
+		<nativemodel commandname="r.neighbors" />
+		<nativemodel commandname="r.null" />
+		<nativemodel commandname="r.out.arc" />
+		<nativemodel commandname="r.out.ascii" />
+		<nativemodel commandname="r.out.bin" />
+		<nativemodel commandname="r.out.gdal" />
+		<nativemodel commandname="r.out.gridatb" />
+		<nativemodel commandname="r.out.mat" />
+		<nativemodel commandname="r.out.mpeg" />
+		<nativemodel commandname="r.out.pov" />
+		<nativemodel commandname="r.out.ppm" />
+		<nativemodel commandname="r.out.ppm3" />
+		<nativemodel commandname="r.out.vrml" />
+		<nativemodel commandname="p.out.vrml" />
+		<nativemodel commandname="r.out.vtk" />
+		<nativemodel commandname="r.param.scale" />
+		<nativemodel commandname="r.patch" />
+		<nativemodel commandname="r.profile" />
+		<nativemodel commandname="r.proj" />
+		<nativemodel commandname="r.quant" />
+		<nativemodel commandname="r.random" />
+		<nativemodel commandname="r.random.cells" />
+		<nativemodel commandname="r.random.surface" />
+		<nativemodel commandname="r.reclass" />
+		<nativemodel commandname="r.recode" />
+		<nativemodel commandname="r.region" />
+		<nativemodel commandname="r.report" />
+		<nativemodel commandname="r.resample" />
+		<nativemodel commandname="r.resamp.interp" />
+		<nativemodel commandname="r.resamp.rst" />
+		<nativemodel commandname="r.resamp.stats" />
+		<nativemodel commandname="r.rescale" />
+		<nativemodel commandname="r.rescale.eq" />
+		<nativemodel commandname="r.series" />
+		<nativemodel commandname="r.slope.aspect" />
+		<nativemodel commandname="r.statistics" />
+		<nativemodel commandname="r.stats" />
+		<nativemodel commandname="r.sum" />
+		<nativemodel commandname="r.sun" />
+		<nativemodel commandname="r.sunmask" />
+		<nativemodel commandname="r.support" />
+		<nativemodel commandname="r.support.stats" />
+		<nativemodel commandname="r.surf.area" />
+		<nativemodel commandname="r.surf.contour" />
+		<nativemodel commandname="r.surf.idw" />
+		<nativemodel commandname="r.surf.idw2" />
+		<nativemodel commandname="r.surf.random" />
+		<nativemodel commandname="r.surf.gauss" />
+		<nativemodel commandname="r.texture" />
+		<nativemodel commandname="r.thin" />
+		<nativemodel commandname="r.timestamp" />
+		<nativemodel commandname="r.to.rast3" />
+		<nativemodel commandname="r.to.rast3elev" />
+		<nativemodel commandname="r.to.vect" />
+		<nativemodel commandname="r.topidx" />
+		<nativemodel commandname="r.topmodel" />
+		<nativemodel commandname="r.transect" />
+		<nativemodel commandname="r3.univar" />
+		<nativemodel commandname="r.univar" />
+		<nativemodel commandname="r.volume" />
+		<nativemodel commandname="r.walk" />
+		<nativemodel commandname="r.watershed" />
+		<nativemodel commandname="r.water.outlet" />
+		<nativemodel commandname="r.what" />
+		<nativemodel commandname="r.what.color" />
+		<nativemodel commandname="r.sim.water" />
+		<nativemodel commandname="r.sim.sediment" />
+		<nativemodel commandname="r.ros" />
+		<nativemodel commandname="r.spread" />
+		<nativemodel commandname="r.spreadpath" />
+		<nativemodel commandname="r.in.gdal" />
+		<nativemodel commandname="r.surf.fractal" />
+		<nativemodel commandname="r.out.png" />
+		<nativemodel commandname="r.out.tiff" />
+		<nativemodel commandname="r3.cross.rast" />
+		<nativemodel commandname="r3.in.ascii" />
+		<nativemodel commandname="r3.in.v5d" />
+		<nativemodel commandname="r3.gwflow" />
+		<nativemodel commandname="r3.out.ascii" />
+		<nativemodel commandname="r3.out.v5d" />
+		<nativemodel commandname="r3.out.vtk" />
+		<nativemodel commandname="r3.stats" />
+		<nativemodel commandname="r3.to.rast" />
+		<nativemodel commandname="r3.info" />
+		<nativemodel commandname="r3.mask" />
+		<nativemodel commandname="r3.null" />
+		<nativemodel commandname="r3.timestamp" />
+		<nativemodel commandname="r3.mkdspf" />
+		<nativemodel commandname="v.buffer" />
+		<nativemodel commandname="v.build" />
+		<nativemodel commandname="v.build.polylines" />
+		<nativemodel commandname="v.category" />
+		<nativemodel commandname="v.clean" />
+		<nativemodel commandname="v.convert" />
+		<nativemodel commandname="v.db.connect" />
+		<nativemodel commandname="v.db.select" />
+		<nativemodel commandname="v.distance" />
+		<nativemodel commandname="v.drape" />
+		<nativemodel commandname="v.edit" />
+		<nativemodel commandname="v.extract" />
+		<nativemodel commandname="v.extrude" />
+		<nativemodel commandname="v.generalize" />
+		<nativemodel commandname="v.hull" />
+		<nativemodel commandname="v.info" />
+		<nativemodel commandname="v.in.ascii" />
+		<nativemodel commandname="v.in.db" />
+		<nativemodel commandname="v.in.dxf" />
+		<nativemodel commandname="v.in.region" />
+		<nativemodel commandname="v.in.sites" />
+		<nativemodel commandname="v.kcv" />
+		<nativemodel commandname="v.kernel" />
+		<nativemodel commandname="v.label" />
+		<nativemodel commandname="v.lrs.create" />
+		<nativemodel commandname="v.lrs.segment" />
+		<nativemodel commandname="v.lrs.label" />
+		<nativemodel commandname="v.lrs.where" />
+		<nativemodel commandname="v.proj" />
+		<nativemodel commandname="v.mkgrid" />
+		<nativemodel commandname="v.neighbors" />
+		<nativemodel commandname="v.net" />
+		<nativemodel commandname="v.net.alloc" />
+		<nativemodel commandname="v.net.iso" />
+		<nativemodel commandname="v.net.path" />
+		<nativemodel commandname="v.net.salesman" />
+		<nativemodel commandname="v.net.steiner" />
+		<nativemodel commandname="v.net.visibility" />
+		<nativemodel commandname="v.normal" />
+		<nativemodel commandname="v.out.ascii" />
+		<nativemodel commandname="v.out.dxf" />
+		<nativemodel commandname="v.out.pov" />
+		<nativemodel commandname="v.out.svg" />
+		<nativemodel commandname="v.out.vtk" />
+		<nativemodel commandname="v.overlay" />
+		<nativemodel commandname="v.parallel" />
+		<nativemodel commandname="v.patch" />
+		<nativemodel commandname="v.perturb" />
+		<nativemodel commandname="v.split" />
+		<nativemodel commandname="v.qcount" />
+		<nativemodel commandname="v.random" />
+		<nativemodel commandname="v.reclass" />
+		<nativemodel commandname="v.sample" />
+		<nativemodel commandname="v.segment" />
+		<nativemodel commandname="v.select" />
+		<nativemodel commandname="v.support" />
+		<nativemodel commandname="v.surf.idw" />
+		<nativemodel commandname="v.surf.rst" />
+		<nativemodel commandname="v.transform" />
+		<nativemodel commandname="v.to.db" />
+		<nativemodel commandname="v.to.points" />
+		<nativemodel commandname="v.to.rast" />
+		<nativemodel commandname="v.to.rast3" />
+		<nativemodel commandname="v.type" />
+		<nativemodel commandname="v.univar" />
+		<nativemodel commandname="v.delaunay" />
+		<nativemodel commandname="v.voronoi" />
+		<nativemodel commandname="v.what" />
+		<nativemodel commandname="v.what.rast" />
+		<nativemodel commandname="v.vol.rst" />
+		<nativemodel commandname="v.surf.bspline" />
+		<nativemodel commandname="v.outlier" />
+		<nativemodel commandname="v.lidar.correction" />
+		<nativemodel commandname="v.lidar.edgedetection" />
+		<nativemodel commandname="v.lidar.growing" />
+		<nativemodel commandname="v.out.ogr" />
+		<nativemodel commandname="v.in.ogr" />
+		<nativemodel commandname="v.external" />
+		<nativemodel commandname="v.digit" />
+  <nativemodel
+        commandname="g.manual">
+  </nativemodel>
+	</extension>
+	<extension point="org.eclipse.ui.startup">
+		<startup class="eu.hydrologis.libs.utils.CommandsCreator">
+		</startup>
+	</extension>
+</plugin>

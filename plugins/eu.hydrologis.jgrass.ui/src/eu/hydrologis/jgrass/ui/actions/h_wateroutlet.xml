@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.wateroutlet" name="h.wateroutlet">
+    <field desc="map" name="map" order="0" repr=" --igrass-map #" required="true" type="rastermap"/>
+    <field desc="flow" name="flow" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="basin" name="basin" order="2" repr=" --ograss-basin #" required="true" type="string"/>
+    <field desc="trim" name="trim" order="3" repr=" --ograss-trim #" required="true" type="string"/>
+    <field desc="east" name="east" order="4" repr=" --east #" required="true" type="string"/>
+    <field desc="north" name="north" order="5" repr=" --north #" required="true" type="string"/>
+    <i18n key="map" en="input map to trim on the basin" it="mappa da estrarre su bacino in ingresso"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni deflusso in ingresso"/>
+    <i18n key="basin" en="basin output map" it="mappa del bacino estratto in uscita"/>
+    <i18n key="trim" en="trimmed output map" it="mappa ritagliata sul bacino"/>
+    <i18n key="north" en="northing basin outlet coordinate" it="coordinata nord della sezione di chiusura"/>
+    <i18n key="east" en="easting basin outlet coordinate" it="coordinata est della sezione di chiusura"/>
+</command>

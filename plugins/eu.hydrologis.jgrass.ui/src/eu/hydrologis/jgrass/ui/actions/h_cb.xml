@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.cb" desc="CB">
+	<field type="rastermap" required="true" name="input1" desc="input map with independent variable" order="0" repr=" --igrass-map1 #" />
+	<field type="rastermap" required="true" name="input2" desc="input map with dependent variable" order="1" repr=" --igrass-map2 #" />
+	<field type="int" required="true" name="first" desc="first moment" order="2" repr=" --firstmoment #" default="1"/>
+	<field type="int" required="true" name="last" desc="last moment" order="3" repr=" --lastmoment #" default="2"/>
+	<field type="string" required="true" name="numbins" desc="number of bins" order="4" repr=" --numbins #" default="100"/>
+	<exclusiveOption name="fileopt" required="false" order="5" desc="output file">
+		<option name="peakfile" desc="Create the peakflow input file" repr=" " >
+		<field type="file" required="false" name="filepeak" desc="peakflow output file" order="0" repr=" --oscalar-out2 #" />
+		</option>
+		<option name="fileall" desc="Create the complete output file" repr=" " >
+		<field type="file" required="false" name="allfile" desc="full output file" order="1" repr=" --oscalar-out1 #" />
+		</option>
+	</exclusiveOption>	
+	<field type="check" required="false" name="table" desc="output table widget" order="6" repr=" --otable-out1 'UITABLE#bins#meanx#moment1#moment2'" />
+	<exclusiveOption name="chartop" required="false" order="7">
+		<option required="false" name="histo" desc="output histogram chart" order="0" repr=" --ochart-out2 'HISTOGRAM#title#meanx#bins#moment1'">
+		</option>
+		<option required="false" name="line" desc="output line chart" order="1" repr=" --ochart-out2 'LINE#title#meanx#bins#moment1'">
+		</option>
+	</exclusiveOption>
+</command>

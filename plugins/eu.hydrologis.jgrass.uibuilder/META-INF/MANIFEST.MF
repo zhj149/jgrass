@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UIBuilder Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.uibuilder
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.uibuilder.UIBuilderPlugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.junit4;resolution:=optional,
+ eu.hydrologis.jgrass.console.editor;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.ui.console,
+ eu.hydrologis.jgrass.ui.utilities,
+ net.refractions.udig.libs,
+ eu.udig.catalog.jgrass;bundle-version="1.0.0",
+ net.refractions.udig.catalog;bundle-version="1.1.0",
+ eu.hydrologis.jgrass.models;bundle-version="1.0.0"
+Eclipse-LazyStart: true
+Export-Package: eu.hydrologis.jgrass.uibuilder,
+ eu.hydrologis.jgrass.uibuilder.fields,
+ eu.hydrologis.jgrass.uibuilder.jgrassdependent,
+ eu.hydrologis.jgrass.uibuilder.jgrassdependent.utils,
+ eu.hydrologis.jgrass.uibuilder.parser,
+ eu.hydrologis.jgrass.uibuilder.renderers,
+ eu.hydrologis.jgrass.uibuilder.swing,
+ eu.hydrologis.jgrass.uibuilder.swt,
+ eu.hydrologis.jgrass.uibuilder.swt.renderers

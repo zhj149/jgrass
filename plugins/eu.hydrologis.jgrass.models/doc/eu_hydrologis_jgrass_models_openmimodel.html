@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>eu.hydrologis.jgrass.models.openmimodel</title>
+<style type="text/css">@import url("file:/home/moovida/rcpdevelopment/eclipse/configuration/org.eclipse.osgi/bundles/488/1/.cp/book.css");</style>
+<style type="text/css">@import url("file:/home/moovida/rcpdevelopment/eclipse/configuration/org.eclipse.osgi/bundles/505/1/.cp/schema.css");</style>
+</HEAD>
+<BODY>
+<H1 style="text-align:center">eu.hydrologis.jgrass.models.openmimodel</H1>
+<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Identifier: </h6>eu.hydrologis.jgrass.models.openmimodel<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Since: </h6>[Enter the first release in which this extension point appears.]
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Description: </h6>This extension point creates an openmi based model that is compatible with the JGrass console engine and Jgrass modeling language for chaining environmental models.
+
+For informations have a look at:
+www.jgrass.org
+www.openmi.org<p></p>
+<h6 class="CaptionFigColumn SchemaHeader">Configuration Markup:</h6>
+<p></p>
+<p class="code SchemaDtd">&lt;!ELEMENT <a name="e.extension">extension</a> (<a href="#e.model">model</a>*)+&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST extension</p>
+<p class="code SchemaDtdAttlist">point&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;CDATA #IMPLIED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+</ul>
+<br><p class="code SchemaDtd">&lt;!ELEMENT <a name="e.model">model</a> (EMPTY?)&gt;</p>
+<p class="code SchemaDtd">&lt;!ATTLIST model</p>
+<p class="code SchemaDtdAttlist">id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #REQUIRED</p><p class="code SchemaDtdAttlist">icon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p><p class="code SchemaDtdAttlist">class&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA "enter new class here"</p><p class="code SchemaDtdAttlist">inputitems&nbsp;&nbsp;CDATA "null"</p><p class="code SchemaDtdAttlist">outputitems&nbsp;CDATA "null"</p><p class="code SchemaDtdAttlist">guixml&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDATA #IMPLIED</p>&gt;</p>
+<p></p>
+<ul class="ConfigMarkupAttlistDesc">
+<li><b>id</b> - </li>
+<li><b>name</b> - </li>
+<li><b>icon</b> - </li>
+<li><b>class</b> - <p>The class name for the new model to be created.</p>
+<p>Note that in order to follow JGrass's guidelines the class name and package should be chosen following the schema:
+to create a <b>r.something</b> command create a package <b>eu.hydrologis.jgrass.models.r.something</b> and put inside there a class named <b>r_something.java</b>
+</p>
+
+<p>
+Note that the class will need to have the following constructors defined, to be functional:
+</p>
+<i>
+&nbsp;&nbsp;&nbsp; public h_something() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; super();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; err =
+FluidUtils.newPrintStream(null, System.err);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out =
+FluidUtils.newPrintStream(null, System.out);<br>
+&nbsp;&nbsp;&nbsp; }<br>
+<br>
+&nbsp;&nbsp;&nbsp; public h_something( PrintStream output, PrintStream
+error ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; super();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; err =
+FluidUtils.newPrintStream(error, System.err);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out =
+FluidUtils.newPrintStream(output, System.out);<br>
+&nbsp;&nbsp;&nbsp; }
+</i></li>
+<li><b>inputitems</b> - <p>
+A comma separated list of input exchange items that the model will accept. 
+</p>
+
+<p>For example if it has two input exchange items that may be linked to the model, the entry could be kind of:</p>
+<b>map=0,rain=1</b></li>
+<li><b>outputitems</b> - <p>
+A comma separated list of output exchange items that the model will accept. 
+</p>
+
+<p>For example if it has one output exchange items that may be linked to the model, the entry could be kind of:</p>
+<b>discharge=0</b></li>
+<li><b>guixml</b> - <p>A correct xml file content that can represent the command as off the uibuilder guidelines. This string will be correctly placed in the system as a file and taken as gui definition for the command.</p>
+
+<p>
+For example for <b>h.pitfiller</b> the gui definition is:</p>
+
+<i>
+&lt;command descr="h.pitfiller" name="h.pitfiller"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;field desc="in" name="input" order="0"
+repr="--igrass-elevation #" required="true" type="rastermap"/&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;field desc="out" name="output" order="1"
+repr="--ograss-pit #" required="true" type="string"/&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;i18n key="in" en="input elevation map" it="mappa
+di elevazione in ingresso"/&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;i18n key="out" en="depitted output map"
+it="mappa depittata in uscita"/&gt;<br>
+&lt;/command&gt;<br></i></li>
+</ul>
+<br><h6 class="CaptionFigColumn SchemaHeader">Examples: </h6>[Enter extension point usage example here.]
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">API Information: </h6>[Enter API information here.]
+<p></p>
+
+<h6 class="CaptionFigColumn SchemaHeader">Supplied Implementation: </h6>[Enter information about supplied implementation of this extension point.]
+<p></p>
+
+<br>
+<p class="note SchemaCopyright">
+/*
+ * JGrass - Free Open Source Java GIS http://www.jgrass.org 
+ * (C) HydroloGIS - www.hydrologis.com 
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+</p>
+</BODY>
+</HTML>

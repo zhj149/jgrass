@@ -1,0 +1,12 @@
+eu.hydrologis.jgrass.uibuilder
+eu.hydrologis.jgrass.uibuilder.fields
+eu.hydrologis.jgrass.uibuilder.jgrassdependent
+eu.hydrologis.jgrass.uibuilder.jgrassdependent.fields
+eu.hydrologis.jgrass.uibuilder.jgrassdependent.renderers
+eu.hydrologis.jgrass.uibuilder.jgrassdependent.utils
+eu.hydrologis.jgrass.uibuilder.parser
+eu.hydrologis.jgrass.uibuilder.renderers
+eu.hydrologis.jgrass.uibuilder.swing
+eu.hydrologis.jgrass.uibuilder.swt
+eu.hydrologis.jgrass.uibuilder.swt.renderers
+eu.hydrologis.jgrass.uibuilder.tests

@@ -1,0 +1,42 @@
+HISTORY
+
+----- Spearfish 6.0:
+11 April 2005 [M. Neteler]
+- redone conversion of vector/sites maps from spearfish53
+- added 3rd dimension to DEFAULT_WIND and WIND files
+
+----- Spearfish 5.7:
+25 May 2004 [M. Neteler]
+- re-converted again all maps to match current 
+  GRASS internal vector format
+
+14 April 2004 [M. Neteler]
+- converted all vector maps to 5.7 vector format
+  Attributes stored in DBF files.
+- converted all sites  maps to 5.7 vector format
+  Attributes stored in DBF files.
+
+----- Spearfish 5.3:
+
+3 March 2004 [M. Neteler/H. Mitasova]
+- added
+  * elevation.10m (USGS Seamless server)
+  * landcover.30m (USGS Seamless server) [landcover.orig is identical, but without legend]
+  * soils.Kfactor replaced (to avoid no data areas)
+
+------ Spearfish 5.0:
+
+4 Jun 2003 [P. Kelly]
+- fixed PROJ_INFO
+  (ellipsoid, datum etc)
+
+11 Feb 2003:
+- fixed topology error for soils (v)
+- fixed vector type error for roads
+
+  M. Neteler
+
+------ Spearfish 4.0
+
+[ original CERL package ]
+

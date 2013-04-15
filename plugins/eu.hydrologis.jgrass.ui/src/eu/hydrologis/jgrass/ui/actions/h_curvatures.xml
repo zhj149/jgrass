@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.curvatures " name="h.curvatures ">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="long map out" name="output" order="1" repr=" --ograss-prof #" required="true" type="string"/>
+    <field desc="norm map out" name="output" order="2" repr=" --ograss-tang #" required="true" type="string"/>
+    <field desc="plan map out" name="output" order="3" repr=" --ograss-plan #" required="true" type="string"/>
+    <i18n key="pit" en="input elevation map" it="mappa di elevazione in ingresso"/>
+    <i18n key="long map out" en="longitudinal curvatures output map" it="mappa delle curvature longitudinali in uscita"/>
+    <i18n key="norm map out" en="normal (tangent) curvatures output map" it="mappa delle curvature normali (tangenti) in uscita"/>
+    <i18n key="plan map out" en="planar curvatures output map" it="mappa delle curvature planari in uscita"/>
+</command>

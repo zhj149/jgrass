@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.markoutlets" name="h.markoutlets">
+    <field desc="flow" name="flow" order="0" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="markout" name="magnitudo" order="1" repr=" --ograss-mflow #" required="true" type="string"/>
+    <i18n key="pit" en="input flowdirections map" it="raster delle direzioni di drenaggio in ingresso"/>
+    <i18n key="markout" en="outlet marked output map" it="mappa con uscite segnate"/>
+</command>

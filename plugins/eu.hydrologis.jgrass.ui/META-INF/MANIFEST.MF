@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: JGrass Ui Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.ui;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.ui.UiPlugin
+Bundle-Vendor: HydroloGIS S.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.hydrologis.jgrass.extlibs;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.libs;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.database;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.uibuilder,
+ eu.hydrologis.jgrass.ui.console,
+ net.refractions.udig.project.ui,
+ eu.hydrologis.jgrass.console.editor;bundle-version="1.0.0";visibility:=reexport,
+ eu.hydrologis.jgrass.grass;bundle-version="1.0.0",
+ eu.udig.catalog.jgrass;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.ui.utilities;bundle-version="1.0.0",
+ org.eclipse.ui.forms;bundle-version="3.3.0",
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ eu.hydrologis.jgrass.netcdf;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.charting;bundle-version="1.0.0"
+Eclipse-LazyStart: true
+Export-Package: eu.hydrologis.jgrass.ui.actions.persistence,
+ eu.hydrologis.jgrass.ui.utils
+Bundle-ClassPath: .

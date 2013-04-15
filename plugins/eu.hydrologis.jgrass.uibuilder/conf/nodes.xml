@@ -1,0 +1,15 @@
+<parser>
+	<node nodeType="command" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.CommandField" />
+	<node nodeType="double" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.DoubleField" />
+	<node nodeType="exclusiveOption" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.ExclusiveOptionField" />
+	<node nodeType="file" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.FileChooserField" />
+	<node nodeType="fileopen" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.FileOpenChooserField" />
+	<node nodeType="folder" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.FolderChooserField" />
+	<node nodeType="int" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.IntegerField" />
+	<node nodeType="multiOption" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.MultiOptionField" />
+	<node nodeType="option" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.OptionField" />
+	<node nodeType="string" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.StringField" />
+	<node nodeType="check" fieldClass="eu.hydrologis.jgrass.uibuilder.fields.OnOffOptionField" />
+	<node nodeType="rastermap" fieldClass="eu.hydrologis.jgrass.uibuilder.jgrassdependent.fields.JGrassRasterMapField" />
+	<node nodeType="combo" fieldClass="eu.hydrologis.jgrass.uibuilder.jgrassdependent.fields.ComboField" />
+</parser>

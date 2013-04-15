@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.multitca " name="h.multitca ">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="flow" name="flow" order="1" repr=" --igrass-flow #" required="true" type="rastermap"/>
+    <field desc="topograph" name="topograph" order="2" repr=" --igrass-casi3 #" required="true" type="rastermap"/>
+    <field desc="multitca" name="multitca" order="3" repr=" --ograss-multitca #" required="true" type="string"/>
+    <i18n key="pit" en="input depitted elevation map" it="mappa delle elevazione depittato in ingresso"/>
+    <i18n key="flow" en="input drainage directions map" it="mappa delle direzioni di drenaggio"/>
+    <i18n key="topograph" en="input aggregated topographic classes  map" it="mappa tc 3 valori in ingresso"/>
+    <i18n key="multitca" en="multitca output map" it="mappa delle multitca in uscita"/>
+</command>

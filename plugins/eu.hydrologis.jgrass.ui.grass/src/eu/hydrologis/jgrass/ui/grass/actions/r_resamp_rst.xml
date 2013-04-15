@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.resamp.rst" name="r.resamp.rst">
+	<field desc="Name of input raster map" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="Desired east-west resolution" name="ew_res" order="1" repr=" ew_res=#" required="true" type="double" />
+	<field desc="Desired north-south resolution" name="ns_res" order="2" repr=" ns_res=#" required="true" type="double" />
+	<field desc="allow output maps to override existing maps" name="over" order="3" repr=" --o" required="false" type="check" />
+	<field desc="Use dnorm independent tension" name="dnorm" order="4" repr=" -t" required="false" type="check" />
+	<field desc="Output partial derivatives instead of topographic parameters" name="der" order="5" repr=" -d" required="false" type="check" />
+	<field desc="Output z-file (elevation) map" name="output" order="6" repr=" elev=#" required="true" type="string" />
+</command>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="h.aspect" name="h.aspect">
+    <field desc="pit" name="pit" order="0" repr=" --igrass-pit #" required="true" type="rastermap"/>
+    <field desc="aspect" name="aspect" order="1" repr=" --ograss-aspect #" required="true" type="string"/>
+    <i18n key="pit" en="input depitted elevations map" it="raster delle elevazione depittato in ingresso"/>
+    <i18n key="aspect" en="aspect output map" it="mappa delle esposizioni in uscita"/>
+</command>

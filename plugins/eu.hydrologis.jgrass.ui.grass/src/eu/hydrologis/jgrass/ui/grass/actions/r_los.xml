@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.los" name="r.los">
+	<field desc="Raster map containing elevation data" name="input" order="0" repr=" input=#" required="true" type="rastermap" />
+	<field desc="Coordinate identifying the viewing location (x,y)" name="coordinate" order="1" repr=" coordinate=#" required="true" type="string" />
+	<field desc="Binary (1/0) raster map" name="patt_map" order="2" repr=" patt_map=#" required="false" type="string" />
+	<field desc="Height of the viewing location (meters)" name="obs_elev" order="3" repr=" obs_elev=#" required="true" type="double" default="1.75"/>
+	<field desc="Max distance from the viewing point (meters) 0-99999" name="max_dist" order="4" repr=" max_dist=#" required="true" type="double" default="1000"/>
+	<field desc="allow output maps to override existing maps" name="over" order="5" repr=" --o" required="false" type="check" />
+	<field desc="Raster map name for storing results" name="output" order="6" repr=" output=#" required="true" type="string" />
+</command>

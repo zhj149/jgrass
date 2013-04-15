@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="Topindex" name="h.topindex">
+    <field desc="tca" name="tca" order="0" repr=" --igrass-tca #" required="true" type="rastermap"/>
+    <field desc="slope" name="slope" order="1" repr=" --igrass-slope #" required="true" type="rastermap"/>
+    <field desc="topindex" name="topindex" order="2" repr=" --ograss-topindex #" required="true" type="string"/>
+    <i18n key="tca" en="input total contributing area map" it="mappa delle aree contribuenti in ingresso"/>
+    <i18n key="slope" en="input slope map" it="mappa delle pendenze in ingresso"/>
+    <i18n key="topindex" en="topindex output map" it="mappa dell'indice topografico in uscita"/>
+</command>

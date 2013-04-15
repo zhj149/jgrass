@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.cutout" name="r.cutout">
+<exclusiveOption name="mode" required="false" order="0">
+		<option name="standard mode" required="false" order="1" repr=" --invert false" default="true">
+		</option>
+		<option name="invert mode (for complementary map)" required="false" order="2" repr=" --invert true" default="false">
+		</option>
+	</exclusiveOption>
+    <field desc="Input raster map to use as mask layer" name="mask" order="1" repr=" --igrass-mask #" required="true" type="rastermap"/>
+    <field desc="Input raster map to cut on the mask" name="tocut" order="2" repr=" --igrass-tocut #" required="true" type="rastermap"/>
+    <field desc="Output raster map cut on the defined mask" name="cut" order="3" repr=" --ograss-cut #" required="true" type="string"/>
+</command>

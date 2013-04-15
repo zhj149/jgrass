@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Utilities Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.ui.utilities
+Bundle-Version: 1.0.0
+Bundle-Vendor: HydroloGIS S.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ eu.udig.catalog.jgrass;bundle-version="1.0.0",
+ net.refractions.udig.project.ui,
+ net.refractions.udig.catalog.postgis,
+ net.refractions.udig.catalog.shp,
+ net.refractions.udig.catalog.wfs,
+ net.refractions.udig.catalog.ui,
+ eu.hydrologis.jgrass.libs,
+ eu.hydrologis.jgrass.console
+Eclipse-LazyStart: false
+Export-Package: eu.hydrologis.jgrass.ui.utilities,
+ eu.hydrologis.jgrass.ui.utilities.chooser,
+ eu.hydrologis.jgrass.ui.utilities.date,
+ eu.hydrologis.jgrass.ui.utilities.editors,
+ eu.hydrologis.jgrass.ui.utilities.messages,
+ eu.hydrologis.jgrass.ui.utilities.widgets
+Bundle-Activator: eu.hydrologis.jgrass.ui.utilities.UiUtilitiesPlugin

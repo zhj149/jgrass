@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command descr="r.out.gdal" name="r.out.gdal">
+	<field desc="map to export" name="input:" order="0" repr=" input=#" required="false" type="rastermap" />
+	<field desc="GIS format to write" name="format" order="1" repr=" format=#"
+		required="true" type="combo"
+		default="GTiff,VRT,NITF,HFA,ELAS,AAIGrid,DTED,PNG,JPEG,MEM,GIF,FITS,XPM,BMP,PCIDSK,PCRaster,ILWIS,GMT,netCDF,HDF4Image,PNM,ENVI,EHdr,PAux,MFF,MFF2,BT,IDA,JPEG2000,FIT,RMF,RST,USGSDEM" />
+	<field desc="type of the resulting file" name="type" order="2"
+		repr=" type=#" required="true" type="combo" default="Float32,Byte,Int16,UInt16,UInt32,Int32,Float64,CInt16,CInt32,CFloat32,CFloat64" />
+	<field desc="output raster file" name="output" order="3" repr=" output=#" required="false" type="file" />
+	<field default="false" desc="list supported file format and exit" name="file format" order="4" repr=" -l" type="check" />
+</command>

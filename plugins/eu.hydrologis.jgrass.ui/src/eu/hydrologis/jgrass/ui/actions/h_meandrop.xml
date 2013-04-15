@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.meandrop" desc="Meandrop">
+	<field type="rastermap" required="true" name="flow" desc="input flow direction map" order="0" repr=" --igrass-flow #" />
+	<field type="rastermap" required="true" name="tca" desc="input total contributing area map" order="1" repr=" --igrass-tca #" />
+	<field type="rastermap" required="true" name="summ" desc="input map for estimating mean value" order="1" repr=" --igrass-summ #" />
+	<field type="string" required="true" name="meandrop" desc="meandrop" order="2" repr=" --ograss-meandrop #" />
+	<i18n key="dist" en="meandrop output map" it="mappa con i valori medi in uscita"/>
+</command>

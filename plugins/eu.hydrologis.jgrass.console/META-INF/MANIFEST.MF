@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Console Plug-in
+Bundle-SymbolicName: eu.hydrologis.jgrass.console
+Bundle-Version: 1.0.0
+Bundle-Activator: eu.hydrologis.jgrass.console.ConsolePlugin
+Bundle-Vendor: HydroloGIS S.r.l.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ eu.hydrologis.jgrass.libs.scripting;bundle-version="1.0.0",
+ eu.hydrologis.jgrass.libs;bundle-version="1.0.0",
+ net.refractions.udig.libs,
+ net.refractions.udig.catalog;bundle-version="1.1.0",
+ eu.hydrologis.jgrass.models;bundle-version="1.0.0"
+Eclipse-LazyStart: true
+Export-Package: eu.hydrologis.jgrass.console,
+ eu.hydrologis.jgrass.console.core,
+ eu.hydrologis.jgrass.console.core.prefs,
+ eu.hydrologis.jgrass.console.core.runtime
+Bundle-ClassPath: .

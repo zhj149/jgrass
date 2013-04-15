@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="lib" path="libs/antlr-runtime.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry exported="true" kind="lib" path="libs/groovy-all-1.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/oms-3-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hortonmachine-0.1-SNAPSHOT.jar" sourcepath="/hortonmachine"/>
+	<classpathentry exported="true" kind="lib" path="libs/jama-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jansi-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jgrassgears-0.1-SNAPSHOT.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jline-0.9.94.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/ejb3-persistence-3.3.2.Beta1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hibernate-3.3.2.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hibernate-annotations-3.4.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hibernate-commons-annotations-3.4.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/hibernate-core-3.3.0.SP1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/javassist-3.8.0.GA.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/joda-time-hibernate-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jta-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/antlr-2.7.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/scannotation-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/geoscript-groovy-0.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/jiffle-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/utils-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/zonalstats-1.0.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

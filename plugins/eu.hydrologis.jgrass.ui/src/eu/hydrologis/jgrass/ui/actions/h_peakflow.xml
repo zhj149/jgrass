@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<command name="h.peakflow" desc="Peakflow">
+	<field type="fileopen" required="true" name="input1" desc="input file with the superficial width function" order="0" repr=" --iscalar-sup #" />
+	<field type="fileopen" required="false" name="input2" desc="input file with the subsuperficial width function" order="1" repr=" --iscalar-sub #" />
+	<option name="statistic mode" order="2" repr="">
+		<field type="string" required="false" name="a" desc="a parameter of IDF curves [m/h^n]" order="0" repr=" --a #"/>
+		<field type="string" required="false" name="n" desc="n parameter of IDF curves" order="1" repr=" --n #"/>
+	</option>
+	<option name="real rain mode" order="3" repr="">
+		<field type="file" required="false" name="rainfall file" desc="the file with the rainfall data" order="0" repr=" --rainfall #"/>
+	</option>
+	<field type="string" required="true" name="v" desc="channel celerity [m/s]" order="4" repr=" --channelcelerity #"/>
+	<field type="string" required="true" name="d" desc="diffusion [m2/s]" order="5" repr=" --diffusion #"/>
+	<field type="string" required="true" name="timestep" desc="output file timestep [s]" order="6" repr=" --outputtimestep #" default="100"/>
+	<check name="write an output discharge file" required="false" order="7" repr="" >
+	<field type="file" required="false" name="file1" desc="output discharge file" order="7" repr=" --oscalar-discharge #" />
+	</check>
+	<field type="check" required="false" name="chart" desc="create the discharge chart" order="8" repr=" --ochart-discharge 'LINE#title#xlabel#ylabel#series1'" />
+</command>

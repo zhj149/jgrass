@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="eu.hydrologis.jgrass.console.editor.preferences.GeneralConsolePreferences"
+            id="eu.hydrologis.jgrass.console.ui.editor.preferences.GeneralConsolePreferences"
+            name="Console"/>
+      <page
+            category="eu.hydrologis.jgrass.console.ui.editor.preferences.GeneralConsolePreferences"
+            class="eu.hydrologis.jgrass.console.editor.preferences.SyntaxColoringPreferences"
+            id="eu.hydrologis.jgrass.console.ui.editor.preferences.SyntaxColoringPreferences"
+            name="Syntax Coloring"/>
+      <page
+            category="eu.hydrologis.jgrass.console.ui.editor.preferences.GeneralConsolePreferences"
+            class="eu.hydrologis.jgrass.console.editor.preferences.CompilerPreferences"
+            id="eu.hydrologis.jgrass.console.ui.editor.preferences.CompilerPreferences"
+            name="Compiler"/>
+      <page
+            category="eu.hydrologis.jgrass.console.ui.editor.preferences.GeneralConsolePreferences"
+            class="eu.hydrologis.jgrass.console.editor.preferences.GeneralGrassPreferences"
+            id="eu.hydrologis.jgrass.console.ui.editor.preferences.GeneralGrassPreferences"
+            name="GRASS"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="eu.hydrologis.jgrass.console.category"
+            description="launch the editor"
+            id="eu.hydrologis.jgrass.console.editor.editors.launchEditorCommand"
+            name="console editor"/>
+      <command
+            categoryId="eu.hydrologis.jgrass.console.category"
+            description="launch the editor on existing file"
+            id="eu.hydrologis.jgrass.console.editor.editors.launchEditorFromFileCommand"
+            name="console editor from file">
+      </command>
+      <command
+            categoryId="eu.hydrologis.jgrass.console.category"
+            description="run console script"
+            id="eu.hydrologis.jgrass.console.editor.consoleruncommand"
+            name="run script">
+      </command>
+      <category
+            id="eu.hydrologis.jgrass.console.category"
+            name="Console Commands">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.eclipse.ui.examples.javaeditor.JavaEditor"
+            extensions="jgrass"
+            icon="icons/console.gif"
+            id="eu.hydrologis.jgrass.console.editor.editors.JGrassConsoleEditor"
+            name="JGrass Console Editor">
+         
+      </editor>
+   </extension>
+      <extension
+            point="org.eclipse.core.runtime.preferences">
+         <initializer class="eu.hydrologis.jgrass.console.editor.preferences.PreferencesInitializer"/>
+      </extension>
+      <extension
+            point="org.eclipse.ui.bindings">
+         <key
+               commandId="eu.hydrologis.jgrass.console.editor.consoleruncommand"
+               contextId="org.eclipse.ui.contexts.window"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="M1+RETURN">
+         </key>
+         <key
+               commandId="eu.hydrologis.jgrass.console.editor.editors.launchEditorFromFileCommand"
+               contextId="org.eclipse.ui.contexts.window"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="ESC M1+M2+E">
+         </key>
+         <key
+               commandId="eu.hydrologis.jgrass.console.editor.editors.launchEditorCommand"
+               contextId="org.eclipse.ui.contexts.window"
+               schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+               sequence="ESC M1+E">
+         </key>
+      </extension>
+      <extension
+            point="org.eclipse.ui.editorActions">
+         <editorContribution
+               id="eu.hydrologis.jgrass.console.jgrass.editor.runscript"
+               targetID="eu.hydrologis.jgrass.console.editor.editors.JGrassConsoleEditor">
+            <action
+                  class="eu.hydrologis.jgrass.console.editor.actions.RunScriptActionDelegate"
+                  definitionId="eu.hydrologis.jgrass.console.editor.consoleruncommand"
+                  id="eu.hydrologis.jgrass.console.jgrasseditor.runscriptaction"
+                  label="run script">
+            </action>
+         </editorContribution>
+      </extension>
+      <extension
+            point="org.eclipse.ui.actionSets">
+         <actionSet
+               description="JGrass Editor actions"
+               id="eu.hydrologis.jgrass.console.jgrasseditor.actionset"
+               label="JGrass Editor"
+               visible="true">
+            <menu
+                  id="jconsole.menu"
+                  label="jconsole"
+                  path="jconsolepath">
+            </menu>
+            <action
+                  class="eu.hydrologis.jgrass.console.editor.actions.ConsoleEditorActionFromOld"
+                  definitionId="eu.hydrologis.jgrass.console.editor.editors.launchEditorFromFileCommand"
+                  icon="icons/consolefile.gif"
+                  id="eu.hydrologis.jgrass.console.editor.action1"
+                  label="jconsole launcher from file"
+                  style="push"
+                  toolbarPath="jconsolepath"
+                  tooltip="launch the JConsole Editor on an existing file">
+            </action>
+            <action
+                  class="eu.hydrologis.jgrass.console.editor.actions.ConsoleEditorActionNew"
+                  definitionId="eu.hydrologis.jgrass.console.editor.editors.launchEditorCommand"
+                  icon="icons/console.gif"
+                  id="eu.hydrologis.jgrass.console.editor.action1"
+                  label="jconsole launcher"
+                  style="push"
+                  toolbarPath="jconsolepath"
+                  tooltip="launch the JConsole Editor">
+            </action>
+         </actionSet>
+      </extension>
+</plugin>
